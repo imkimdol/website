@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="WebsiteGame"
-run/main_scene="res://test_scene.tscn"
+config/name="Harper Kim"
+run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-boot_splash/show_image=false
-config/icon="res://icon.svg"
+boot_splash/image="res://assets/boot.png"
+config/icon="res://assets/icon.svg"
 
 [display]
 
