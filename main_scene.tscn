@@ -1,13 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=12 format=3 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://camera.gd" id="3_lthha"]
 [ext_resource type="TileSet" uid="uid://bupwnqfgyarkl" path="res://tile_set.tres" id="3_olnpi"]
 [ext_resource type="Texture2D" uid="uid://cgvlpe8nhg1r1" path="res://assets/Tiny Dungeon/Tiles/tile_0085.png" id="4_u4isq"]
+[ext_resource type="Texture2D" uid="uid://yugt7s7qx0mf" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/W_Cropped.png" id="5_sjj1y"]
+[ext_resource type="Texture2D" uid="uid://cmtonoh2pvojv" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/A_Cropped.png" id="6_vd01n"]
+[ext_resource type="Texture2D" uid="uid://cuykqu65cx746" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/S_Cropped.png" id="7_qaxbd"]
+[ext_resource type="Texture2D" uid="uid://ciorq4u4buuu6" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/D_Cropped.png" id="8_imyld"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhnas"]
-radius = 24.0
-height = 60.0
+radius = 5.75
+height = 15.0
 
 [sub_resource type="Animation" id="Animation_6r21t"]
 resource_name = "hop"
@@ -23,7 +27,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.15),
 "transitions": PackedFloat32Array(1, 1.36604, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -15), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(0, -4), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_okkiu"]
@@ -44,12 +48,12 @@ layer_1/tile_data = PackedInt32Array(-327680, 1, 65536)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(32, 32)
+scale = Vector2(4, 4)
 collision_mask = 2
 script = ExtResource("1_kbqtd")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -96)
-zoom = Vector2(1.75, 1.75)
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
@@ -57,11 +61,11 @@ rotation_smoothing_enabled = true
 script = ExtResource("3_lthha")
 
 [node name="Icon" type="Sprite2D" parent="Player"]
-scale = Vector2(4, 4)
 texture = ExtResource("4_u4isq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, 2)
+visible = false
+position = Vector2(0, 0.5)
 shape = SubResource("CapsuleShape2D_uhnas")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
@@ -69,3 +73,46 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_okkiu")
 }
+
+[node name="WASDLabel" type="Node2D" parent="Player"]
+scale = Vector2(0.075, 0.075)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player/WASDLabel"]
+z_index = 1
+offset_left = -308.0
+offset_top = -300.0
+offset_right = 309.0
+offset_bottom = -148.0
+size_flags_horizontal = 4
+
+[node name="KeysContainer" type="VBoxContainer" parent="Player/WASDLabel/HBoxContainer"]
+layout_mode = 2
+
+[node name="Top" type="HBoxContainer" parent="Player/WASDLabel/HBoxContainer/KeysContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="W" type="TextureRect" parent="Player/WASDLabel/HBoxContainer/KeysContainer/Top"]
+layout_mode = 2
+texture = ExtResource("5_sjj1y")
+
+[node name="Bottom" type="HBoxContainer" parent="Player/WASDLabel/HBoxContainer/KeysContainer"]
+layout_mode = 2
+
+[node name="A" type="TextureRect" parent="Player/WASDLabel/HBoxContainer/KeysContainer/Bottom"]
+layout_mode = 2
+texture = ExtResource("6_vd01n")
+
+[node name="S" type="TextureRect" parent="Player/WASDLabel/HBoxContainer/KeysContainer/Bottom"]
+layout_mode = 2
+texture = ExtResource("7_qaxbd")
+
+[node name="D" type="TextureRect" parent="Player/WASDLabel/HBoxContainer/KeysContainer/Bottom"]
+layout_mode = 2
+texture = ExtResource("8_imyld")
+
+[node name="Label" type="Label" parent="Player/WASDLabel/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 90
+text = " to move"
+vertical_alignment = 1
