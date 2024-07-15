@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Harper Kim"
+config/name="WebsiteGame"
 run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://assets/Tiny Dungeon/tile_0085_scaled.png"
