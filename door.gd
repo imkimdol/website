@@ -9,7 +9,8 @@ func _process(delta):
 		on_door_interact()
 
 func on_door_interact():
-	OS.shell_open(hyperlink)
+	if OS.has_feature('web'):
+		JavaScriptBridge.eval("window.location.href='" + hyperlink + "'")
 
 func _on_area_2d_body_entered(body):
 	player_entered = true
