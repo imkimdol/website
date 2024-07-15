@@ -17,3 +17,5 @@ func _physics_process(delta):
 		velocity.y = move_toward(velocity.y, 0, DECELLERATION)
 
 	move_and_slide()
+	if velocity.length_squared() > MAX_SPEED / 4:
+		$AnimationPlayer.play("hop")

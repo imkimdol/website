@@ -1,12 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=8 format=3 uid="uid://doupl4bwkdeat"]
 
-[ext_resource type="Texture2D" uid="uid://pskee50krgb7" path="res://assets/icon.svg" id="1_5s7lr"]
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://camera.gd" id="3_lthha"]
 [ext_resource type="TileSet" uid="uid://bupwnqfgyarkl" path="res://tile_set.tres" id="3_olnpi"]
+[ext_resource type="Texture2D" uid="uid://cgvlpe8nhg1r1" path="res://assets/Tiny Dungeon/Tiles/tile_0085.png" id="4_u4isq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rhxtc"]
-radius = 32.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhnas"]
+radius = 24.0
+height = 60.0
+
+[sub_resource type="Animation" id="Animation_6r21t"]
+resource_name = "hop"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Icon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1.36604, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -15), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okkiu"]
+_data = {
+"hop": SubResource("Animation_6r21t")
+}
 
 [node name="MainScene" type="Node2D"]
 
@@ -25,7 +48,7 @@ collision_mask = 2
 script = ExtResource("1_kbqtd")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(0, -64)
+offset = Vector2(0, -96)
 zoom = Vector2(1.75, 1.75)
 process_callback = 0
 position_smoothing_enabled = true
@@ -34,8 +57,15 @@ rotation_smoothing_enabled = true
 script = ExtResource("3_lthha")
 
 [node name="Icon" type="Sprite2D" parent="Player"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_5s7lr")
+scale = Vector2(4, 4)
+texture = ExtResource("4_u4isq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CircleShape2D_rhxtc")
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_uhnas")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_okkiu")
+}

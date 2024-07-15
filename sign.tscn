@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://sign.gd" id="1_513hb"]
 [ext_resource type="Texture2D" uid="uid://bjh48txv1nfmj" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/Light/E_Key_Light.png" id="3_cknt7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_erudr"]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrn8e"]
+size = Vector2(14, 11)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7cbp0"]
 radius = 16.0
@@ -40,7 +40,8 @@ script = ExtResource("1_513hb")
 texture = ExtResource("1_22nhh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_erudr")
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_nrn8e")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
