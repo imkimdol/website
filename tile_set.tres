@@ -1,7 +1,6 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bupwnqfgyarkl"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bupwnqfgyarkl"]
 
 [ext_resource type="Texture2D" uid="uid://d3g14dyb6wtdq" path="res://assets/Tiny Town/Tilemap/tilemap.png" id="1_rallm"]
-[ext_resource type="PackedScene" uid="uid://b214l8eg7ep77" path="res://sign.tscn" id="2_m045q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ems0i"]
 texture = ExtResource("1_rallm")
@@ -123,10 +122,5 @@ separation = Vector2i(1, 1)
 9:1/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t1wph"]
-resource_name = "Sign"
-scenes/1/scene = ExtResource("2_m045q")
-
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_ems0i")
-sources/1 = SubResource("TileSetScenesCollectionSource_t1wph")
