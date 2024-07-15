@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bupwnqfgyarkl"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bupwnqfgyarkl"]
 
 [ext_resource type="Texture2D" uid="uid://d3g14dyb6wtdq" path="res://assets/Tiny Town/Tilemap/tilemap.png" id="1_rallm"]
+[ext_resource type="Texture2D" uid="uid://dqj5effdvnwr3" path="res://assets/black.png" id="2_go33m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ems0i"]
 texture = ExtResource("1_rallm")
@@ -451,7 +452,14 @@ separation = Vector2i(1, 1)
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3408"]
+texture = ExtResource("2_go33m")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_ems0i")
+sources/1 = SubResource("TileSetAtlasSource_p3408")

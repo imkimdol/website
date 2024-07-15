@@ -15,23 +15,16 @@ func _ready():
 	label.text = text
 	label.add_theme_stylebox_override("normal", new_sb)
 
-func _process(delta):
-	if Input.is_action_pressed("ui_accept") and player_entered:
-		on_sign_interact()
-
-func on_sign_interact():
-	pass
-
 func _on_area_2d_body_entered(body):
 	player_entered = true
-	Global.focus_camera.emit()
+	Global.focus_camera()
 	
 	var tween = get_tree().create_tween()
 	tween.tween_property($InteractionLabel, "modulate", Color(1,1,1,1), 0.5)
 
 func _on_area_2d_body_exited(body):
 	player_entered = false
-	Global.unfocus_camera.emit()
+	Global.unfocus_camera()
 	
 	var tween = get_tree().create_tween()
 	tween.tween_property($InteractionLabel, "modulate", Color(1,1,1,0), 0.5)

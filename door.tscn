@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmwmsf8kert2"]
+
+[ext_resource type="Script" path="res://door.gd" id="1_ifofk"]
+[ext_resource type="Texture2D" uid="uid://d01se7owchmv5" path="res://assets/Tiny Town/door_cropped.png" id="2_lp680"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7cbp0"]
+
+[node name="Door" type="StaticBody2D"]
+z_index = 1
+collision_layer = 0
+script = ExtResource("1_ifofk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lp680")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.08165e-12, 3)
+shape = SubResource("CircleShape2D_7cbp0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

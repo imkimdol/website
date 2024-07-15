@@ -1,10 +1,9 @@
-extends Camera2D
+class_name CustomCamera extends Camera2D
 
 var tween: Tween
 
 func _ready():
-	Global.focus_camera.connect(on_focus_camera)
-	Global.unfocus_camera.connect(on_unfocus_camera)
+	Global.camera = self
 	zoom_to(Vector2(2, 2), 2)
 
 func on_focus_camera():

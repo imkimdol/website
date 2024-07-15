@@ -1,4 +1,4 @@
-class_name Character extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 const ACCELERATION = 100.0
 const DECELLERATION = 50.0
@@ -10,6 +10,7 @@ var wasd_is_showing := true
 
 func _ready():
 	$WASDLabel.modulate = Color(1,1,1,1)
+	$ELabel.modulate = Color(1,1,1,0)
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -25,7 +26,6 @@ func _physics_process(delta):
 			velocity = velocity.limit_length(MAX_SPEED)
 		
 		hide_wasd()
-		wasd_is_showing = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, DECELLERATION)
 		velocity.y = move_toward(velocity.y, 0, DECELLERATION)
@@ -35,7 +35,7 @@ func _physics_process(delta):
 	if velocity.length_squared() > MAX_SPEED / 2:
 		$AnimationPlayer.play("hop")
 	
-	if seconds_from_last_movement_input >= 3.0 and not wasd_is_showing:
+	if seconds_from_last_movement_input >= 3.0 and not wasd_is_showing and not Global.camera_focused:
 		show_wasd()
 
 func show_wasd():
@@ -47,3 +47,11 @@ func hide_wasd():
 	var tween = get_tree().create_tween()
 	tween.tween_property($WASDLabel, "modulate", Color(1,1,1,0), 0.15)
 	wasd_is_showing = false
+
+func show_e():
+	var tween = get_tree().create_tween()
+	tween.tween_property($ELabel, "modulate", Color(1,1,1,1), 0.15)
+
+func hide_e():
+	var tween = get_tree().create_tween()
+	tween.tween_property($ELabel, "modulate", Color(1,1,1,0), 0.15)
