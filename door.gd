@@ -5,7 +5,7 @@ class_name Door extends StaticBody2D
 var player_entered := false
 
 func _process(delta):
-	if Input.is_action_pressed("ui_accept") and player_entered:
+	if Input.is_action_just_pressed("ui_accept") and player_entered:
 		on_door_interact()
 
 func on_door_interact():
