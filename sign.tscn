@@ -35,7 +35,6 @@ _data = {
 z_index = 1
 collision_layer = 0
 script = ExtResource("1_513hb")
-text = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_22nhh")

@@ -6,6 +6,7 @@ const MAX_SPEED = 300.0
 
 var seconds_from_last_movement_input := 0.0
 var controllable := true
+var direction_override := Vector2.ZERO
 var wasd_is_showing := true
 
 func _ready():
@@ -17,6 +18,8 @@ func _physics_process(delta):
 	
 	if controllable:
 		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	else:
+		direction = direction_override
 	
 	if direction:
 		seconds_from_last_movement_input = 0
