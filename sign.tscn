@@ -54,10 +54,11 @@ position = Vector2(0, -1.4357)
 scale = Vector2(0.1, 0.1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="InteractionLabel"]
+z_index = 1
 offset_left = -115.0
-offset_top = -200.0
+offset_top = -190.0
 offset_right = 139.0
-offset_bottom = -100.0
+offset_bottom = -90.0
 size_flags_horizontal = 4
 
 [node name="Label" type="Label" parent="InteractionLabel/HBoxContainer"]
