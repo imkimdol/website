@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=29 format=3 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
@@ -206,10 +206,58 @@ _data = {
 "reset": SubResource("Animation_1w6rn")
 }
 
+[sub_resource type="Environment" id="Environment_fckxv"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.13
+adjustment_enabled = true
+adjustment_brightness = 0.9
+adjustment_contrast = 1.3
+adjustment_saturation = 0.9
+
+[sub_resource type="Animation" id="Animation_tbkdm"]
+resource_name = "cycle"
+length = 120.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 45, 60, 105),
+"transitions": PackedFloat32Array(5.27803, 1.36604, 4.14105, 1),
+"update": 0,
+"values": [Color(0.07, 0.07, 0.07, 1), Color(0, 0.580167, 0.59, 1), Color(0.729393, 0.74, 0.1036, 1), Color(0.0567, 0.26289, 0.27, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g612r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.621705, 0.63, 0.1323, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m5svh"]
+_data = {
+"RESET": SubResource("Animation_g612r"),
+"cycle": SubResource("Animation_tbkdm")
+}
+
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_u3254")
-rect_relative_x_pos = 1.0
-rect_relative_y_pos = 2.08167e-17
+rect_relative_x_pos = 2.08165e-12
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -325,6 +373,7 @@ position = Vector2(32, 32)
 scale = Vector2(4, 4)
 collision_mask = 6
 script = ExtResource("1_kbqtd")
+controllable = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -96)
@@ -438,11 +487,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="harperkimca" type="Label" parent="CanvasLayer/MarginContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_4hwgo")
 theme_override_font_sizes/font_size = 70
-text = "
-"
+text = "harperkim.ca"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -451,6 +500,19 @@ libraries = {
 "": SubResource("AnimationLibrary_y3gs4")
 }
 autoplay = "reset"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fckxv")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.621705, 0.63, 0.1323, 1)
+blend_mode = 1
+
+[node name="DayNightCycle" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m5svh")
+}
+autoplay = "cycle"
 
 [connection signal="body_entered" from="Interactables/Projects/ProjectsCutsceneTrigger1" to="." method="_on_projects_cutscene_trigger_1_body_entered"]
 [connection signal="body_entered" from="Interactables/Projects/ProjectsCutsceneTrigger2" to="." method="_on_projects_cutscene_trigger_2_body_entered"]

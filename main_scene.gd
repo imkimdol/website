@@ -30,4 +30,3 @@ func _on_music_cutscene_trigger_2_body_entered(body):
 	$CutsceneAnimator.play("music_cutscene")
 	await $CutsceneAnimator.animation_finished
 	Global.open_link("https://kimdol.com/music")
-
