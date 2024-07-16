@@ -640,11 +640,31 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="harperkimca" type="Label" parent="CanvasLayer/MarginContainer"]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_4hwgo")
 theme_override_font_sizes/font_size = 70
 text = "harperkim.ca"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SafariNotice" type="Label" parent="CanvasLayer/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_4hwgo")
+theme_override_font_sizes/font_size = 30
+text = "
+
+
+
+
+
+
+
+
+
+
+
+Alert: Safari is not fully supported. Please use a Chromium browser for the best experience."
 horizontal_alignment = 1
 vertical_alignment = 1
 
