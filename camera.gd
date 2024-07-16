@@ -4,13 +4,12 @@ var tween: Tween
 
 func _ready():
 	Global.camera = self
-	zoom_to(Vector2(2, 2), 2)
 
 func on_focus_camera():
 	zoom_to(Vector2(3, 3), 0.5)
 
 func on_unfocus_camera():
-	zoom_to(Vector2(2, 2), 1)
+	zoom_to(Vector2(2.25, 2.25), 1)
 
 func zoom_to(amount: Vector2, duration: float):
 	if tween:

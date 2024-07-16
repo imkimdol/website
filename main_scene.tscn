@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=23 format=3 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
@@ -51,7 +51,7 @@ length = 1.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rect_relative_pos")
+tracks/0/path = NodePath(".:rect_relative_x_pos")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -60,6 +60,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [-1.0, 2.08167e-17]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rect_relative_y_pos")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.08167e-17]
+}
 
 [sub_resource type="Animation" id="Animation_4bpc6"]
 resource_name = "projects_cutscene"
@@ -67,7 +79,7 @@ length = 1.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rect_relative_pos")
+tracks/0/path = NodePath(".:rect_relative_x_pos")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -76,25 +88,105 @@ tracks/0/keys = {
 "update": 0,
 "values": [1.0, 2.08167e-17]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rect_relative_y_pos")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.08167e-17]
+}
 
 [sub_resource type="Animation" id="Animation_1w6rn"]
 resource_name = "reset"
 length = 0.1
+
+[sub_resource type="Animation" id="Animation_vd8hf"]
+resource_name = "intro_cutscene"
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rect_relative_pos")
+tracks/0/path = NodePath(".:rect_relative_x_pos")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-1.0]
+"values": [2.08165e-12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rect_relative_y_pos")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3.5),
+"transitions": PackedFloat32Array(1, 4.28709, 1),
+"update": 0,
+"values": [2.08167e-17, 2.08167e-17, -1.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Camera2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [Vector2(2.25, 2.25), 2.5],
+"method": &"zoom_to"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:controllable")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/MarginContainer/harperkimca:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.4, 1.8, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["
+", "h", "ha", "har", "harp", "harpe", "harper", "harperk", "harperki", "harperkim", "harperkim.", "harperkim.c", "harperkim.ca"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/MarginContainer/harperkimca:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y3gs4"]
 _data = {
+"intro_cutscene": SubResource("Animation_vd8hf"),
 "music_cutscene": SubResource("Animation_8g5aa"),
 "projects_cutscene": SubResource("Animation_4bpc6"),
 "reset": SubResource("Animation_1w6rn")
@@ -102,7 +194,8 @@ _data = {
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_u3254")
-rect_relative_pos = 1.0
+rect_relative_x_pos = 2.08165e-12
+rect_relative_y_pos = 2.08167e-17
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -221,7 +314,6 @@ script = ExtResource("1_kbqtd")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -96)
-zoom = Vector2(1.25, 1.25)
 process_callback = 0
 limit_left = -1088
 limit_top = -2112
@@ -312,17 +404,28 @@ text = "to enter"
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="CutsceneRect" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1920.0
-offset_right = -1920.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.054902, 0.054902, 0.054902, 1)
+color = Color(0.027451, 0.027451, 0.027451, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="harperkimca" type="Label" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "harperkim.ca"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CutsceneAnimator" type="AnimationPlayer" parent="."]
 libraries = {
