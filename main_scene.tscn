@@ -45,66 +45,6 @@ _data = {
 "hop": SubResource("Animation_6r21t")
 }
 
-[sub_resource type="Animation" id="Animation_8g5aa"]
-resource_name = "music_cutscene"
-length = 1.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rect_relative_x_pos")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-1.0, 2.08167e-17]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rect_relative_y_pos")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.08167e-17]
-}
-
-[sub_resource type="Animation" id="Animation_4bpc6"]
-resource_name = "projects_cutscene"
-length = 1.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rect_relative_x_pos")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 2.08167e-17]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rect_relative_y_pos")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.08167e-17]
-}
-
-[sub_resource type="Animation" id="Animation_1w6rn"]
-resource_name = "reset"
-length = 0.1
-
 [sub_resource type="Animation" id="Animation_vd8hf"]
 resource_name = "intro_cutscene"
 length = 4.0
@@ -184,6 +124,66 @@ tracks/5/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_8g5aa"]
+resource_name = "music_cutscene"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rect_relative_x_pos")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.0, 2.08167e-17]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rect_relative_y_pos")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(4.59479),
+"update": 0,
+"values": [2.08167e-17]
+}
+
+[sub_resource type="Animation" id="Animation_4bpc6"]
+resource_name = "projects_cutscene"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rect_relative_x_pos")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 2.08167e-17]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rect_relative_y_pos")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(4.92458),
+"update": 0,
+"values": [2.08167e-17]
+}
+
+[sub_resource type="Animation" id="Animation_1w6rn"]
+resource_name = "reset"
+length = 0.1
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y3gs4"]
 _data = {
 "intro_cutscene": SubResource("Animation_vd8hf"),
@@ -194,7 +194,6 @@ _data = {
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_u3254")
-rect_relative_x_pos = 1.0
 rect_relative_y_pos = 2.08167e-17
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -316,9 +315,9 @@ script = ExtResource("1_kbqtd")
 offset = Vector2(0, -96)
 process_callback = 0
 limit_left = -1088
-limit_top = -2112
+limit_top = -2016
 limit_right = 1152
-limit_bottom = 512
+limit_bottom = 608
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 rotation_smoothing_enabled = true
@@ -424,7 +423,8 @@ grow_vertical = 2
 [node name="harperkimca" type="Label" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
-text = "harperkim.ca"
+text = "
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 

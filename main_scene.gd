@@ -7,11 +7,11 @@ func _ready():
 	$CanvasLayer.visible = true
 	$CutsceneAnimator.play("intro_cutscene")
 
-func _physics_process(delta):
-	$CanvasLayer/CutsceneRect.position.x = get_viewport().size.x * rect_relative_x_pos
-	$CanvasLayer/CutsceneRect.position.y = get_viewport().size.y * rect_relative_y_pos
-	$CanvasLayer/MarginContainer.position.x = get_viewport().size.x * rect_relative_x_pos
-	$CanvasLayer/MarginContainer.position.y = get_viewport().size.y * rect_relative_y_pos
+func _process(delta):
+	$CanvasLayer/CutsceneRect.position.x = $CanvasLayer/CutsceneRect.size.x * rect_relative_x_pos
+	$CanvasLayer/CutsceneRect.position.y = $CanvasLayer/CutsceneRect.size.y * rect_relative_y_pos
+	$CanvasLayer/MarginContainer.position.x = $CanvasLayer/MarginContainer.size.x * rect_relative_x_pos
+	$CanvasLayer/MarginContainer.position.y = $CanvasLayer/MarginContainer.size.y * rect_relative_y_pos
 
 func _on_projects_cutscene_trigger_1_body_entered(body):
 	$Player.controllable = false
