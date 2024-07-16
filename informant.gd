@@ -11,7 +11,6 @@ func on_sign_interact():
 
 func _on_area_2d_body_entered(body):
 	player_entered = true
-	Global.focus_camera.emit()
 	$Sprite2D.modulate = Color(0.5, 0.5, 1)
 	
 	var tween = get_tree().create_tween()
@@ -19,7 +18,6 @@ func _on_area_2d_body_entered(body):
 
 func _on_area_2d_body_exited(body):
 	player_entered = false
-	Global.unfocus_camera.emit()
 	$Sprite2D.modulate = Color(1, 1, 1)
 	
 	var tween = get_tree().create_tween()

@@ -45,22 +45,6 @@ _data = {
 "hop": SubResource("Animation_6r21t")
 }
 
-[sub_resource type="Animation" id="Animation_1w6rn"]
-resource_name = "reset"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rect_relative_pos")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-1.0]
-}
-
 [sub_resource type="Animation" id="Animation_8g5aa"]
 resource_name = "music_cutscene"
 length = 1.4
@@ -91,6 +75,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(4.92458, 1),
 "update": 0,
 "values": [1.0, 2.08167e-17]
+}
+
+[sub_resource type="Animation" id="Animation_1w6rn"]
+resource_name = "reset"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rect_relative_pos")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y3gs4"]
