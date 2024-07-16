@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/Rubik-Bold.ttf-4c18c45d10ad0c6fc2ce5da4070bde
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
