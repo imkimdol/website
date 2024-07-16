@@ -11,8 +11,12 @@ func on_focus_camera():
 func on_unfocus_camera():
 	zoom_to(Vector2(2.25, 2.25), 1)
 
-func zoom_to(amount: Vector2, duration: float):
+func zoom_to(amount: Vector2, duration: float,
+ease: Tween.EaseType = Tween.EASE_IN_OUT,
+trans: Tween.TransitionType = Tween.TRANS_LINEAR):
 	if tween:
 		tween.kill()
 	tween = get_tree().create_tween()
+	tween.set_ease(ease)
+	tween.set_trans(trans)
 	tween.tween_property(self, "zoom", amount, duration)
