@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=27 format=3 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
@@ -206,21 +206,6 @@ _data = {
 "reset": SubResource("Animation_1w6rn")
 }
 
-[sub_resource type="Animation" id="Animation_g612r"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DirectionalLight2D:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.621705, 0.63, 0.1323, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_tbkdm"]
 resource_name = "cycle"
 length = 120.0
@@ -241,14 +226,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m5svh"]
 _data = {
-"RESET": SubResource("Animation_g612r"),
 "cycle": SubResource("Animation_tbkdm")
 }
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_u3254")
 rect_relative_x_pos = 2.08165e-12
-rect_relative_y_pos = 2.08167e-17
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -364,6 +347,7 @@ position = Vector2(32, 32)
 scale = Vector2(4, 4)
 collision_mask = 6
 script = ExtResource("1_kbqtd")
+controllable = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -96)
@@ -477,11 +461,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="harperkimca" type="Label" parent="CanvasLayer/MarginContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_4hwgo")
 theme_override_font_sizes/font_size = 70
-text = "
-"
+text = "harperkim.ca"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -492,7 +476,7 @@ libraries = {
 autoplay = "reset"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-color = Color(0.621705, 0.63, 0.1323, 1)
+color = Color(0.07, 0.07, 0.07, 1)
 blend_mode = 1
 
 [node name="DayNightCycle" type="AnimationPlayer" parent="."]
