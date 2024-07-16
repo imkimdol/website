@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b214l8eg7ep77"]
+[gd_scene load_steps=8 format=3 uid="uid://b214l8eg7ep77"]
 
 [ext_resource type="Texture2D" uid="uid://bk7rx8aqcclua" path="res://assets/Tiny Town/Tiles/tile_0083.png" id="1_22nhh"]
 [ext_resource type="Script" path="res://sign.gd" id="1_513hb"]
+[ext_resource type="FontFile" uid="uid://c3aghilr8sdde" path="res://assets/Rubik font/static/Rubik-Regular.ttf" id="3_ml03n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrn8e"]
 size = Vector2(14, 11)
@@ -50,7 +51,6 @@ collision_layer = 0
 shape = SubResource("CircleShape2D_7cbp0")
 
 [node name="InteractionLabel" type="Node2D" parent="."]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(0, -2)
 scale = Vector2(0.1, 0.1)
 
@@ -63,8 +63,21 @@ offset_bottom = -90.0
 size_flags_horizontal = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="InteractionLabel/HBoxContainer"]
+[node name="Container" type="MarginContainer" parent="InteractionLabel/HBoxContainer"]
 layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="InteractionLabel/HBoxContainer/Container"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.498039)
+
+[node name="MarginContainer" type="MarginContainer" parent="InteractionLabel/HBoxContainer/Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="Label" type="Label" parent="InteractionLabel/HBoxContainer/Container/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ml03n")
 theme_override_font_sizes/font_size = 58
 text = "Sign Text"
 vertical_alignment = 1

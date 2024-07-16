@@ -6,14 +6,8 @@ var player_entered := false
 
 func _ready():
 	$InteractionLabel.modulate = Color(1,1,1,0)
-	
-	# https://forum.godotengine.org/t/changing-the-background-color-of-a-label/3006/2
-	var new_sb = StyleBoxFlat.new()
-	new_sb.bg_color = Color(0,0,0,0.5)
-	
-	var label = $InteractionLabel/HBoxContainer/Label
+	var label = $InteractionLabel/HBoxContainer/Container/MarginContainer/Label
 	label.text = text
-	label.add_theme_stylebox_override("normal", new_sb)
 
 func _on_area_2d_body_entered(body):
 	player_entered = true

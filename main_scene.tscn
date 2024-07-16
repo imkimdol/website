@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=25 format=3 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bjh48txv1nfmj" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/Light/E_Key_Light.png" id="9_akc7u"]
 [ext_resource type="PackedScene" uid="uid://b214l8eg7ep77" path="res://sign.tscn" id="9_fi07t"]
 [ext_resource type="PackedScene" uid="uid://bmwmsf8kert2" path="res://door.tscn" id="10_wsk4b"]
+[ext_resource type="FontFile" uid="uid://c3aghilr8sdde" path="res://assets/Rubik font/static/Rubik-Regular.ttf" id="12_k3stx"]
+[ext_resource type="FontFile" uid="uid://b1x6371sqsmd1" path="res://assets/Rubik font/static/Rubik-Light.ttf" id="14_4hwgo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdp3"]
 size = Vector2(480, 128)
@@ -194,7 +196,7 @@ _data = {
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_u3254")
-rect_relative_x_pos = 2.08165e-12
+rect_relative_x_pos = 1.0
 rect_relative_y_pos = 2.08167e-17
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -216,7 +218,7 @@ layer_2/tile_data = PackedInt32Array(-1114119, 0, 4, -1048583, 0, 5, -983047, 0,
 [node name="ProjectsSign" parent="Interactables/Projects" instance=ExtResource("9_fi07t")]
 position = Vector2(-128, -456)
 scale = Vector2(4, 4)
-text = "< To Projects"
+text = "« To Projects"
 
 [node name="ProjectsCutsceneTrigger1" type="Area2D" parent="Interactables/Projects"]
 position = Vector2(-832, -384)
@@ -237,7 +239,7 @@ shape = SubResource("RectangleShape2D_c8ka4")
 [node name="MusicSign" parent="Interactables/Music" instance=ExtResource("9_fi07t")]
 position = Vector2(192, -456)
 scale = Vector2(4, 4)
-text = "To Music Portfolio >"
+text = "To Music Portfolio »"
 
 [node name="MusicCutsceneTrigger1" type="Area2D" parent="Interactables/Music"]
 position = Vector2(896, -384)
@@ -377,6 +379,7 @@ texture = ExtResource("8_imyld")
 
 [node name="Label" type="Label" parent="Player/WASDLabel/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_k3stx")
 theme_override_font_sizes/font_size = 90
 text = " to move"
 vertical_alignment = 1
@@ -399,6 +402,7 @@ texture = ExtResource("9_akc7u")
 
 [node name="Label" type="Label" parent="Player/ELabel/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_k3stx")
 theme_override_font_sizes/font_size = 58
 text = "to enter"
 vertical_alignment = 1
@@ -423,6 +427,7 @@ grow_vertical = 2
 
 [node name="harperkimca" type="Label" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("14_4hwgo")
 theme_override_font_sizes/font_size = 70
 text = "
 "
