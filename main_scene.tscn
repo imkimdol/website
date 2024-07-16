@@ -214,14 +214,14 @@ step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DirectionalLight2D:color")
+tracks/0/path = NodePath("Lighting/DirectionalLight2D:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 45, 60, 105),
-"transitions": PackedFloat32Array(5.27803, 1.36604, 4.14105, 1),
+"times": PackedFloat32Array(0, 45, 60, 110),
+"transitions": PackedFloat32Array(5.27803, 1.36604, 4.92457, 1),
 "update": 0,
-"values": [Color(0.07, 0.07, 0.07, 1), Color(0, 0.580167, 0.59, 1), Color(0.729393, 0.74, 0.1036, 1), Color(0.0567, 0.26289, 0.27, 1)]
+"values": [Color(0.929412, 0.929412, 0.929412, 1), Color(1, 0.419608, 0.411765, 1), Color(0.270588, 0.258824, 0.898039, 1), Color(0.945098, 0.737255, 0.729412, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m5svh"]
@@ -475,11 +475,17 @@ libraries = {
 }
 autoplay = "reset"
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-color = Color(0.07, 0.07, 0.07, 1)
-blend_mode = 1
+[node name="Lighting" type="Node2D" parent="."]
 
-[node name="DayNightCycle" type="AnimationPlayer" parent="."]
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+color = Color(0, 0, 0, 1)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting"]
+color = Color(0.270588, 0.258824, 0.898039, 1)
+shadow_enabled = true
+
+[node name="DayNightCycle" type="AnimationPlayer" parent="Lighting"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_m5svh")
 }
