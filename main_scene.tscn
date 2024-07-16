@@ -427,7 +427,7 @@ layer_2/tile_data = PackedInt32Array(-1114119, 0, 4, -1048583, 0, 5, -983047, 0,
 [node name="ProjectsSign" parent="Interactables/Projects" instance=ExtResource("9_fi07t")]
 position = Vector2(-128, -456)
 scale = Vector2(4, 4)
-text = "« To Projects"
+text = "« To Software Projects"
 
 [node name="ProjectsCutsceneTrigger1" type="Area2D" parent="Interactables/Projects"]
 position = Vector2(-832, -384)
