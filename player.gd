@@ -45,7 +45,7 @@ func _physics_process(delta):
 
 func show_wasd():
 	var tween = get_tree().create_tween()
-	tween.tween_property($WASDLabel, "modulate", Color(1,1,1,1), 0.75)
+	tween.tween_property($WASDLabel, "modulate", Color(1,1,1,1), 0.5)
 	wasd_is_showing = true
 
 func hide_wasd():
@@ -59,4 +59,4 @@ func show_e():
 
 func hide_e():
 	var tween = get_tree().create_tween()
-	tween.tween_property($ELabel, "modulate", Color(1,1,1,0), 0.15)
+	tween.tween_property($ELabel, "modulate", Color(1,1,1,0), 0.25)

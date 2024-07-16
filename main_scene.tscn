@@ -70,7 +70,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 2, 3.5),
-"transitions": PackedFloat32Array(1, 4.28709, 1),
+"transitions": PackedFloat32Array(1, 3.4822, 1),
 "update": 0,
 "values": [2.08167e-17, 2.08167e-17, -1.0]
 }
@@ -95,7 +95,7 @@ tracks/3/path = NodePath("Player:controllable")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -125,10 +125,22 @@ tracks/5/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/CutsceneRect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2, 3.5, 4),
+"transitions": PackedFloat32Array(5.65685, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_8g5aa"]
 resource_name = "music_cutscene"
-length = 1.4
+length = 1.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -137,7 +149,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"transitions": PackedFloat32Array(4.92457, 1),
 "update": 0,
 "values": [-1.0, 2.08167e-17]
 }
@@ -149,14 +161,14 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(4.59479),
+"transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [2.08167e-17]
 }
 
 [sub_resource type="Animation" id="Animation_4bpc6"]
 resource_name = "projects_cutscene"
-length = 1.4
+length = 1.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -165,7 +177,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"transitions": PackedFloat32Array(4.92458, 1),
 "update": 0,
 "values": [1.0, 2.08167e-17]
 }
@@ -177,7 +189,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(4.92458),
+"transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [2.08167e-17]
 }
