@@ -2,4 +2,4 @@
 
 Source code for the interactive game at https://harperkim.ca.
 
-[Credits](https://harperkim.ca/credits)
+[Credits and Attibutions](https://harperkim.ca/credits)
