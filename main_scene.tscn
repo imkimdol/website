@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=33 format=3 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
@@ -405,7 +405,14 @@ _data = {
 "cycle": SubResource("Animation_tbkdm")
 }
 
+[sub_resource type="Environment" id="Environment_vjw4m"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.16
+adjustment_enabled = true
+
 [node name="MainScene" type="Node2D"]
+visible = false
 script = ExtResource("1_u3254")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -647,27 +654,6 @@ text = "harperkim.ca"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SafariNotice" type="Label" parent="CanvasLayer/MarginContainer"]
-visible = false
-layout_mode = 2
-theme_override_fonts/font = ExtResource("14_4hwgo")
-theme_override_font_sizes/font_size = 30
-text = "
-
-
-
-
-
-
-
-
-
-
-
-Alert: Safari is not fully supported. Please use a Chromium browser for the best experience."
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="CutsceneAnimator" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_y3gs4")
@@ -688,6 +674,9 @@ libraries = {
 "": SubResource("AnimationLibrary_m5svh")
 }
 autoplay = "cycle"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vjw4m")
 
 [connection signal="body_entered" from="Interactables/Projects/ProjectsCutsceneTrigger1" to="." method="_on_projects_cutscene_trigger_1_body_entered"]
 [connection signal="body_entered" from="Interactables/Projects/ProjectsCutsceneTrigger2" to="." method="_on_projects_cutscene_trigger_2_body_entered"]

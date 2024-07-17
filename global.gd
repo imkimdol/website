@@ -1,10 +1,16 @@
 extends Node
 
-var camera_focused = false
+const main_scene: PackedScene = preload("res://main_scene.tscn")
+
+var webkit := false
+var camera_focused := false
 var camera: CustomCamera
 
 func _ready():
 	DisplayServer.window_set_title("Harper Kim")
+
+func load_main_scene():
+	get_tree().change_scene_to_packed(main_scene)
 
 func open_link(link: String):
 	if OS.has_feature('web'):
