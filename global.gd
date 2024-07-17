@@ -13,8 +13,9 @@ func load_main_scene():
 	get_tree().change_scene_to_packed(main_scene)
 
 func open_link(link: String):
-	if OS.has_feature('web'):
-		JavaScriptBridge.eval("window.location.href='" + link + "'")
+	#if OS.has_feature('web'):
+	#	JavaScriptBridge.eval("window.location.href='" + link + "'")
+	OS.shell_open(link)
 
 func focus_camera():
 	camera_focused = true
