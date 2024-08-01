@@ -3,6 +3,7 @@ extends Node
 const main_scene: PackedScene = preload("res://main_scene.tscn")
 
 var webkit := false
+var apple := false
 var camera_focused := false
 var camera: CustomCamera
 

@@ -4,9 +4,9 @@ class_name MainScene extends Node2D
 @export_range(-1,1) var rect_relative_y_pos := -1.0
 
 func _ready():
-	if Global.webkit:
+	if Global.apple:
 		$WorldEnvironment.free()
-		$Lighting.free()
+		#$Lighting.free()
 		$CanvasLayer/CutsceneRect.material.shader = null
 	
 	$CanvasLayer.visible = true

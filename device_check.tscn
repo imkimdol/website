@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn6y7nmhb8lo8"]
+
+[ext_resource type="Script" path="res://device_check.gd" id="1_dlg7n"]
+[ext_resource type="FontFile" uid="uid://b1x6371sqsmd1" path="res://assets/Rubik font/static/Rubik-Light.ttf" id="2_yr6f4"]
+[ext_resource type="FontFile" uid="uid://c3aghilr8sdde" path="res://assets/Rubik font/static/Rubik-Regular.ttf" id="3_rsqrl"]
+
+[node name="WebkitCheck" type="Node2D"]
+script = ExtResource("1_dlg7n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.228769, 0.228769, 0.228769, 1)
+
+[node name="Warning" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_right = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Warning"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Warning/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.917262, 0.917262, 0.917262, 1)
+theme_override_fonts/font = ExtResource("2_yr6f4")
+theme_override_font_sizes/font_size = 60
+text = "Warning"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Warning/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.917262, 0.917262, 0.917262, 1)
+theme_override_fonts/font = ExtResource("2_yr6f4")
+theme_override_font_sizes/font_size = 30
+text = "MacOS, iOS, and other browsers on Apple devices are not fully supported due to WebGL issues."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/Warning/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.917262, 0.917262, 0.917262, 1)
+theme_override_fonts/font = ExtResource("2_yr6f4")
+theme_override_font_sizes/font_size = 25
+text = "This website is built with Godot Engine, which relies on WebGL 2.0 to render visual effects. You may experience glitches or unintended behavior."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="CanvasLayer/Warning/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5, 0.5, 1)
+theme_override_fonts/font = ExtResource("2_yr6f4")
+theme_override_font_sizes/font_size = 35
+text = "Please use a different device for the best experience. (A fallback website is planned!)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Warning/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 320
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 320
+
+[node name="Button" type="Button" parent="CanvasLayer/Warning/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_rsqrl")
+theme_override_font_sizes/font_size = 50
+text = "Proceed"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Warning/VBoxContainer/MarginContainer/Button"]
+layout_mode = 2
+offset_left = -411.0
+offset_right = 613.0
+offset_bottom = 68.0
+
+[connection signal="pressed" from="CanvasLayer/Warning/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
