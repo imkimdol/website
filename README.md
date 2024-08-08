@@ -1,4 +1,4 @@
-# WebsiteGame
+# website-interactive
 
 Source code for the interactive game at https://harperkim.ca.
 
