@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
-[ext_resource type="Script" uid="uid://cffbfbxcak7m8" path="res://main_scene.gd" id="1_u3254"]
+[ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
 [ext_resource type="Script" uid="uid://fhsb71vnfvqf" path="res://camera.gd" id="3_lthha"]
 [ext_resource type="TileSet" uid="uid://bupwnqfgyarkl" path="res://tile_set.tres" id="3_olnpi"]
 [ext_resource type="Texture2D" uid="uid://cgvlpe8nhg1r1" path="res://assets/Tiny Dungeon/Tiles/tile_0085.png" id="4_u4isq"]

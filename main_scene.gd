@@ -25,7 +25,7 @@ func _on_projects_cutscene_trigger_1_body_entered(body):
 func _on_projects_cutscene_trigger_2_body_entered(body):
 	$CutsceneAnimator.play("projects_cutscene")
 	await $CutsceneAnimator.animation_finished
-	Global.open_link("https://kimdol.com/software")
+	Global.open_link("https://harperkim.ca/software")
 
 func _on_music_cutscene_trigger_1_body_entered(body):
 	$Player.controllable = false
