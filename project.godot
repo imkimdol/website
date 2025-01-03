@@ -12,7 +12,7 @@ config_version=5
 
 config/name="WebsiteGame"
 run/main_scene="res://device_check.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/show_image=false
 boot_splash/image="res://assets/blank.png"
 config/icon="res://assets/Tiny Dungeon/tile_0085_scaled.png"
@@ -28,6 +28,10 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
+
+[dotnet]
+
+project/assembly_name="WebsiteGame"
 
 [editor_plugins]
 

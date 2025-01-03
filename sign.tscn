@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b214l8eg7ep77"]
 
 [ext_resource type="Texture2D" uid="uid://bk7rx8aqcclua" path="res://assets/Tiny Town/Tiles/tile_0083.png" id="1_22nhh"]
-[ext_resource type="Script" path="res://sign.gd" id="1_513hb"]
+[ext_resource type="Script" uid="uid://1jeei8brui6b" path="res://sign.gd" id="1_513hb"]
 [ext_resource type="FontFile" uid="uid://c3aghilr8sdde" path="res://assets/Rubik font/static/Rubik-Regular.ttf" id="3_ml03n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrn8e"]
@@ -29,7 +29,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vrytt"]
 _data = {
-"float": SubResource("Animation_y75y4")
+&"float": SubResource("Animation_y75y4")
 }
 
 [node name="Sign" type="StaticBody2D"]
@@ -84,7 +84,7 @@ vertical_alignment = 1
 
 [node name="FloatAnimation" type="AnimationPlayer" parent="InteractionLabel"]
 libraries = {
-"": SubResource("AnimationLibrary_vrytt")
+&"": SubResource("AnimationLibrary_vrytt")
 }
 autoplay = "float"
 
