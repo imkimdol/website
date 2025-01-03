@@ -644,12 +644,12 @@ cutscene_animation = NodePath("../../../CutsceneAnimator")
 [node name="EmailSign" parent="Interactables/Email" instance=ExtResource("9_fi07t")]
 position = Vector2(-352, -1408)
 scale = Vector2(4, 4)
-text = "Email (kimdol@proton.me)"
+text = "Email (contact@harperkim.ca)"
 
 [node name="EmailDoor" parent="Interactables/Email" node_paths=PackedStringArray("player", "cutscene_animation") instance=ExtResource("10_wsk4b")]
 position = Vector2(-288, -1440)
 scale = Vector2(4, 4)
-hyperlink = "mailto:kimdol@proton.me"
+hyperlink = "mailto:contact@harperkim.ca"
 player = NodePath("../../../Player")
 cutscene_animation = NodePath("../../../CutsceneAnimator")
 
