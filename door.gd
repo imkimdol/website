@@ -11,6 +11,7 @@ func _process(delta):
 
 func on_door_interact():
 	player.controllable = false
+	player.direction_override = Vector2.ZERO
 	self.visible = false
 	cutscene_animation.play("warp_cutscene")
 	
