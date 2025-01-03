@@ -1,5 +1,5 @@
 # website-interactive
 
-Source code for the interactive game at https://harperkim.ca.
+Source code for the interactive section of https://harperkim.ca.
 
 [Credits and Attibutions](https://harperkim.ca/credits)
