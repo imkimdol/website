@@ -80,7 +80,7 @@ code = "shader_type canvas_item;
 render_mode blend_mix;
 
 uniform bool Warp = false;
-uniform float amount : hint_range(0.0, 5.0) = 1.0;
+uniform float amount : hint_range(0, 5) = 1;
 uniform sampler2D Texture2DParameter : filter_nearest, repeat_disable, hint_screen_texture;
 uniform vec4 multiply : source_color = vec4(1.000000, 1.000000, 1.000000, 1.000000);
 

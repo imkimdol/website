@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7dayc6n1vkqn"]
 
-[ext_resource type="Script" uid="uid://06etu376s48q" path="res://informant.gd" id="1_6y0i4"]
+[ext_resource type="Script" path="res://informant.gd" id="1_6y0i4"]
 [ext_resource type="Texture2D" uid="uid://bk7rx8aqcclua" path="res://assets/Tiny Town/Tiles/tile_0083.png" id="2_06vlj"]
 [ext_resource type="Texture2D" uid="uid://bjh48txv1nfmj" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/Light/E_Key_Light.png" id="3_gixrd"]
 
@@ -29,7 +29,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vrytt"]
 _data = {
-&"float": SubResource("Animation_y75y4")
+"float": SubResource("Animation_y75y4")
 }
 
 [node name="Informant" type="StaticBody2D"]
@@ -74,7 +74,7 @@ texture = ExtResource("3_gixrd")
 
 [node name="FloatAnimation" type="AnimationPlayer" parent="InteractionLabel"]
 libraries = {
-&"": SubResource("AnimationLibrary_vrytt")
+"": SubResource("AnimationLibrary_vrytt")
 }
 autoplay = "float"
 
