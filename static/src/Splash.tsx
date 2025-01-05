@@ -6,7 +6,7 @@ export default function Splash() {
           Hello! I am a student at the University of British Columbia with deep interests in software development,
           video game development, and music production.
         </p>
-        <p className="tryInteractive">Try my interactive website</p>
+        <a href="https://harperkim.ca/interactive" className="tryInteractive">Try my interactive website!</a>
         <p className="below">
           or see below to learn more.
         </p>
