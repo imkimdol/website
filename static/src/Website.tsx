@@ -1,7 +1,11 @@
-function Website() {
+import Splash from "./Splash";
+import Projects from "./projects/Projects";
+
+export default function Website() {
   return (
-    <p>Hello World!</p>
+    <div>
+      <Splash />
+      <Projects />
+    </div>
   );
 }
-
-export default Website;
