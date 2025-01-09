@@ -88,11 +88,36 @@
   font-size: 60px;
   text-align: center;
 }
-.splash .center p {
+.splash .center .greeting {
   padding: 20px 40px;
 
   font-size: 20px;
   text-align: center;
+}
+.splash .center .greeting .hello:hover .wave {
+  animation: wave 0.5s;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+  20% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(7deg);
+  }
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
 
@@ -163,7 +188,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 
