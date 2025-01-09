@@ -20,10 +20,16 @@ export default function Splash() {
     <section className="splash">
       <div className="center">
         <h1>Harper Kim</h1>
-        <p className="greeting">
-          👋 Hello! I am a student at the University of British Columbia with interests in software development,
-          video game development, and music production.
-        </p>
+        <div className="greeting">
+          <span className="hello">
+            <span className="wave">👋</span>
+            &nbsp;Hello!
+          </span>
+          <span>
+            &nbsp;I am a student at the University of British Columbia with interests in software development,
+            video game development, and music production.
+          </span>
+        </div>
         <div className="tryHoverDet">
           <div className="tryOuter">
             <a className="tryInner" href="https://harperkim.ca/interactive"><p>Try my interactive website!</p></a>
