@@ -1,0 +1,37 @@
+.softwareInfo {
+  padding: 0;
+}
+.softwareInfo ul {
+  padding: 0;
+}
+.softwareInfo ul li {
+  padding: 30px
+}
+
+.thisWebsite {
+  background: gray;
+}
+
+.workpianNameBlaster {
+  background: radial-gradient(circle at 50% 77%, #0090f1, #ffaf37 75%);;
+}
+
+.tempoRubato {
+  background: gray;
+}
+
+.discordBotHelpers {
+  background-color: #5865F2;
+}
+
+.LiVer {
+  background: gray;
+}
+
+.ImageBoard {
+  background: white;
+}
+
+.futurePlans {
+  background: gray;
+}

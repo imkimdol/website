@@ -1,0 +1,15 @@
+h1 {
+  cursor: default;
+}
+a {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+
+  cursor: default;
+}
