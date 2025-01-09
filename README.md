@@ -2,4 +2,4 @@
 
 Source code for https://harperkim.ca.
 
-[Credits and Attibutions](https://harperkim.ca/credits)
+[Credits and Attibutions for the interactive section.](https://harperkim.ca/credits)
