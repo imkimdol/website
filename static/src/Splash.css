@@ -1,0 +1,245 @@
+.splash {
+  height: 100vh;
+  /* Created with https://csshero.org/mesher/ */
+  background-color:#ff99e2;
+  background-image:
+    radial-gradient(at 32% 81%, hsla(293,91%,65%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 72%, hsla(125,81%,68%,1) 0px, transparent 50%),
+    radial-gradient(at 65% 53%, hsla(238,84%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 78% 12%, hsla(166,90%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 73% 44%, hsla(198,83%,65%,1) 0px, transparent 50%),
+    radial-gradient(at 85% 40%, hsla(253,74%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 42% 30%, hsla(154,97%,65%,1) 0px, transparent 50%);
+  background-size: 150% 150%;
+  animation: splash-gradient 5s ease infinite;
+  margin: 0 0 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  z-index: 1;
+}
+.splash > * {
+  z-index: 1;
+}
+@keyframes splash-gradient {
+  0% {
+    background-position: 
+      0% 0%,
+      0% 0%,
+      100% 0%,
+      0% 100%,
+      100% 100%,
+      0% 0%,
+      100% 100%;
+  }
+  50% {
+    background-position: 
+      100% 100%,
+      100% 0%,
+      0% 100%,
+      100% 0%,
+      0% 0%,
+      100% 100%,
+      0% 0%;
+  }
+  100% {
+    background-position: 
+      0% 0%,
+      0% 0%,
+      100% 0%,
+      0% 100%,
+      100% 100%,
+      0% 0%,
+      100% 100%;
+  }
+}
+
+.splash .center {
+  max-width: 600px;
+
+  margin: 0 10vw;
+  padding: 20px 0px;
+
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+  transition: top 0.5s, background 0.5s;
+}
+.splash .center:hover {
+  /* top: 7.3vh; */
+  background: rgba(0, 0, 0, 0.45);
+}
+.splash .center h1 {
+  margin: 0;
+  padding: 20px;
+
+  font-size: 60px;
+  text-align: center;
+}
+.splash .center p {
+  padding: 20px 40px;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+.splash .center .tryHoverDet {
+  margin: 20px;
+  position: relative;
+  top: 0px;
+
+  transition: top 0.1s;
+}
+.splash .center .tryHoverDet:hover {
+  top: -2px;
+}
+.splash .center .tryHoverDet:active {
+  top: 4px;
+}
+.splash .center .tryHoverDet .tryOuter {
+  border: double 1.5px transparent;
+  background-image: linear-gradient(#00000000, #00000000);
+  border-radius: 32px;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: scrolling-gradient 6s linear infinite;
+}
+.splash .center .tryHoverDet:hover .tryOuter {
+  background: repeating-linear-gradient(to right, #4af9ff, #ff31ff, #4af9ff);
+  background-size: 300% 100%;
+}
+
+.splash .center .tryOuter .tryInner {
+  padding: 12px 15px;
+  border-radius: 32px;
+  display: inline-flex;
+
+  border-style: solid;
+  border: 0;
+  background-color: rgba(10, 10, 10, 0.5);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+
+  transition: box-shadow 1s;
+}
+.splash .center .tryHoverDet:hover .tryOuter .tryInner {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7), 0px 0px 15px 0px rgba(255, 255, 255, 0.9);
+
+  transition: text-shadow 0.3s;
+}
+.splash .center .tryHoverDet:active .tryOuter .tryInner {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7), 0px 0px 15px 0px rgb(158, 252, 255, 0.9);
+}
+
+
+.splash .center .tryOuter .tryInner p {
+  cursor: pointer;
+
+  font-size: 17px;
+  padding: 0;
+  color: rgb(220, 220, 220, 1);
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.3);
+
+  animation: scrolling-gradient 6s linear infinite;
+}
+.splash .center .tryHoverDet:hover .tryOuter .tryInner p {
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+
+  background: repeating-linear-gradient(to right, #4af9ff, #ff31ff, #4af9ff);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+
+.splash .bottom {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 0.75s ease-out;
+}
+.splash .bottom.hidden {
+  opacity: 0;
+}
+.splash .bottom .text {
+  position: relative;
+  top: 0;
+  text-align: center;
+  padding: 5px 5px 18px 5px;
+
+  font-size: 17px;
+
+  background: repeating-linear-gradient(
+    to right, 
+    #ffffff,
+    #969696 25%,
+    #ffffff 50%,
+    #969696 75%,
+    #ffffff 100%
+  );
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  z-index: 2;
+
+  transition: top 0.3s;
+  animation: text-float 1.5s ease-in-out infinite alternate,
+    scrolling-gradient 10s linear infinite;
+}
+.splash .bottom .text:hover {
+  top: -3px;
+  -webkit-text-fill-color: #ffffff;
+  animation-play-state: paused;
+}
+.splash .bottom .textShadow {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 5px 5px 18px 5px;
+
+  font-size: 17px;
+  color:rgba(0, 0, 0, 0);
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+@keyframes text-float {
+	0% {
+		transform: translateY(-7px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+
+
+@keyframes scrolling-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: -300% 50%;
+	}
+}
