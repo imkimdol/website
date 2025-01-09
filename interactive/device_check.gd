@@ -17,4 +17,4 @@ func _on_proceed_pressed() -> void:
 	Global.load_main_scene()
 
 func _on_go_back_pressed() -> void:
-	Global.open_link("https://harperkim.ca/interactive/software")
+	Global.open_link("https://harperkim.ca")
