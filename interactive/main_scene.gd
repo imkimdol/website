@@ -34,7 +34,7 @@ func _on_projects_cutscene_trigger_2_body_entered(body):
 	$Player.direction_override = Vector2.ZERO
 	$CutsceneAnimator.play("projects_cutscene")
 	await $CutsceneAnimator.animation_finished
-	Global.open_link("https://harperkim.ca/software")
+	Global.open_link("https://harperkim.ca/interactive/software")
 	
 	await get_tree().create_timer(0.5).timeout
 	

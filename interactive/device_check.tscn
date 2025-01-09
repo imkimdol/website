@@ -67,7 +67,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.5, 0.5, 1)
 theme_override_fonts/font = ExtResource("2_yr6f4")
 theme_override_font_sizes/font_size = 35
-text = "Please use a different device for the best experience. (A fallback website is planned!)"
+text = "Please use a different device for the best experience."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -78,17 +78,23 @@ theme_override_constants/margin_left = 320
 theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 320
 
-[node name="Button" type="Button" parent="CanvasLayer/Warning/VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Warning/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Proceed" type="Button" parent="CanvasLayer/Warning/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_rsqrl")
 theme_override_font_sizes/font_size = 50
 text = "Proceed"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Warning/VBoxContainer/MarginContainer/Button"]
+[node name="Go Back" type="Button" parent="CanvasLayer/Warning/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-offset_left = -411.0
-offset_right = 613.0
-offset_bottom = 68.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_rsqrl")
+theme_override_font_sizes/font_size = 40
+text = "Go Back"
 
-[connection signal="pressed" from="CanvasLayer/Warning/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Warning/VBoxContainer/MarginContainer/VBoxContainer/Proceed" to="." method="_on_proceed_pressed"]
+[connection signal="pressed" from="CanvasLayer/Warning/VBoxContainer/MarginContainer/VBoxContainer/Go Back" to="." method="_on_go_back_pressed"]
