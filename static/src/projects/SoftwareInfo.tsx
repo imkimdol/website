@@ -82,34 +82,29 @@ function ImageBoard() {
 //     <li className="discordBotHelpers">
 //       <h3>Discord Bot Helpers</h3>
 //       <p>
-//         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
 //       </p>
 //       <ul>
 //         <li>
 //           <h4>Discord WOL</h4>
 //           <p>
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
 //           </p>
 //           <a href="https://github.com/imkimdol/discord-wol" target="_blank" rel="noreferrer">Github</a>
 //         </li>
 //         <li>
 //           <h4>Discord Roulette</h4>
 //           <p>
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
 //           </p>
 //           <a href="https://github.com/imkimdol/discord-roulette" target="_blank" rel="noreferrer">Github</a>
 //         </li>
 //         <li>
 //           <h4>Discord Scheduler</h4>
 //           <p>
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
 //           </p>
 //           <a href="https://github.com/imkimdol/discord-scheduler" target="_blank" rel="noreferrer">Github</a>
 //         </li>
 //         <li>
 //           <h4>Minecraft Server Status Checker</h4>
 //           <p>
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
 //           </p>
 //           <a href="https://github.com/imkimdol/minecraft-server-status-checker" target="_blank" rel="noreferrer">Github</a>
 //         </li>

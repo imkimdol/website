@@ -29,7 +29,7 @@ function RhythmGamePrototype() {
   return (
     <InfoCard
       title="Rhythm Game Prototype"
-      desc="A prototype for a basic rhythm game. Created for the UBC Game Dev club."
+      desc="A prototype for a basic rhythm game. Built with Godot Engine and created for the UBC Game Dev club."
       url="https://github.com/imkimdol/rhythm-game-prototype"
     />
   );

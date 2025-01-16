@@ -39,10 +39,10 @@ export default function Splash() {
       <div className={`bottom ${textIsVisible ? '' : 'hidden'}`}>
         <div>
           <p className="text">
-            More details coming soon :)
+            ∨ or see below to learn more ∨
           </p>
           <p className="textShadow">
-            More details coming soon :)
+            ∨ or see below to learn more ∨
           </p>
         </div>
       </div>
