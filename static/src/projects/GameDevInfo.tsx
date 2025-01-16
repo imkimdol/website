@@ -1,35 +1,56 @@
+import InfoCard from './InfoCard';
+
 export default function GameDevInfo() {
   return (
-    <div className="gameDevInfo">
-      <ul>
-        <li>
-          <h3>Interactive website</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
-          </p>
-          <a href="https://harperkim.ca/interactive">Check it out!</a>
-        </li>
-        <li>
-          <h3>Rhythm Game Prototype</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
-          </p>
-          <a href="https://github.com/imkimdol/rhythm-game-prototype">Github</a>
-        </li>
-        <li>
-          <h3>Unwatered Crops</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
-          </p>
-          <a href="https://github.com/imkimdol/UnwateredCrops">Github</a>
-        </li>
-      </ul>
-      <div>
-        <h3>Future Plans</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, nulla nec finibus suscipit, purus dolor posuere lacus, eget euismod nunc ligula eu quam. Phasellus eget nulla eget neque iaculis maximus. Cras accumsan quam ac porta finibus. Integer lorem augue, faucibus at lacus at, elementum aliquam ipsum. Vivamus suscipit ipsum sed lacus gravida ullamcorper quis nec metus. Nullam ut orci massa. Cras eget sapien ut urna volutpat rhoncus. Mauris egestas sed quam ut aliquet. Aliquam dapibus magna vel sapien pulvinar iaculis. Praesent nec sem varius, porta arcu non, vehicula ex. In hac habitasse platea dictumst. Fusce bibendum venenatis diam ut rutrum. Fusce sagittis risus sapien, quis molestie nulla fringilla sed. Etiam est leo, lobortis sed consequat in, efficitur et risus.
-        </p>
+    <div className="innerPanel gameDevInfo">
+      <h2>Game Development</h2>
+      <div className="cardsOuter">
+        <ul className="cards">
+          <InteractiveWebsite />
+          <RhythmGamePrototype />
+          <UnwateredCrops />
+        </ul>
       </div>
     </div>
   );
 }
+
+function InteractiveWebsite() {
+  return (
+    <InfoCard
+      title="Interactive Website"
+      desc="The interactive portion of this website is built with Godot Engine. It is designed to be a engaging way to learn about my work and my passions."
+      url="https://github.com/imkimdol/website-source"
+    />
+  );
+};
+
+function RhythmGamePrototype() {
+  return (
+    <InfoCard
+      title="Rhythm Game Prototype"
+      desc="A prototype for a basic rhythm game. Created for the UBC Game Dev club."
+      url="https://github.com/imkimdol/rhythm-game-prototype"
+    />
+  );
+};
+
+function UnwateredCrops() {
+  return (
+    <InfoCard
+      title="Unwatered Crops"
+      desc="A Stardew Valley mod that notifies players of unwatered crops when leaving the farm."
+      url="https://github.com/imkimdol/UnwateredCrops"
+    />
+  );
+};
+
+// function FuturePlans() {
+//   return (
+//     <InfoCard
+//       title="Future Plans"
+//       desc="ASDF"
+//       url={null}
+//     />
+//   );
+// };

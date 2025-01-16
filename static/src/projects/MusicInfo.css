@@ -1,0 +1,32 @@
+.musicInfoInner {
+  position: relative;
+  top: -28px;
+
+  min-height: 200px;
+  margin: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.musicInfoInner h3 {
+  padding: 0;
+  margin: 32px;
+
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+
+.musicInfoInner a {
+  padding: 12px 15px;
+
+  border-radius: 32px;
+  background-color: rgba(150, 150, 150, 0.5);
+  
+  transition: background-color .5s;
+}
+.musicInfoInner a:hover {
+  background-color: grey;
+}
