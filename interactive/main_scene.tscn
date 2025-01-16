@@ -669,7 +669,7 @@ text = "Credits"
 [node name="CreditsDoor" parent="Interactables/Credits" node_paths=PackedStringArray("player", "cutscene_animation") instance=ExtResource("10_wsk4b")]
 position = Vector2(352, -1440)
 scale = Vector2(4, 4)
-hyperlink = "https://harperkim.ca/credits"
+hyperlink = "https://harperkim.ca/interactive/credits"
 player = NodePath("../../../Player")
 cutscene_animation = NodePath("../../../CutsceneAnimator")
 

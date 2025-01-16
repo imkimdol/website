@@ -13,5 +13,8 @@ func _ready() -> void:
 	else:
 		Global.load_main_scene()
 
-func _on_button_pressed() -> void:
+func _on_proceed_pressed() -> void:
 	Global.load_main_scene()
+
+func _on_go_back_pressed() -> void:
+	Global.open_link("https://harperkim.ca")

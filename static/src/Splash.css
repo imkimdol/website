@@ -1,5 +1,5 @@
 .splash {
-  height: 85vh;
+  height: 100vh;
   /* Created with https://csshero.org/mesher/ */
   background-color:#ff99e2;
   background-image:
@@ -24,21 +24,6 @@
 }
 .splash > * {
   z-index: 1;
-}
-.splash::after {
-  content: "";
-  display: block;
-
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -10vh;
-  transform: scaleX(1.5) scaleY(1.3);
-
-  background: inherit;
-  filter: blur(30px);
-
-  z-index: 0;
 }
 @keyframes splash-gradient {
   0% {
@@ -75,9 +60,6 @@
 
 .splash .center {
   max-width: 600px;
-
-  position: relative;
-  top: 7.5vh;
 
   margin: 0 10vw;
   padding: 20px 0px;
