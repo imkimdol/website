@@ -1,11 +1,17 @@
 h1 {
   cursor: default;
 }
-a {
+h2 {
   margin: 0;
   padding: 0;
-  color: white;
-  text-decoration: none;
+
+  cursor: default;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+
+  cursor: default;
 }
 p {
   margin: 0;
@@ -18,4 +24,10 @@ span {
   padding: 0;
 
   cursor: default;
+}
+a {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
 }
