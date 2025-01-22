@@ -17,14 +17,59 @@
   border-radius: 16px;
   box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
 }
+
 .innerPanel.softwareInfo {
   background: linear-gradient(to bottom right, rgb(0, 50, 0), rgb(0, 0, 0));
 }
+.innerPanel.softwareInfo h2 {
+  font-family: "Kode Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.innerPanel.softwareInfo h3 {
+  font-family: "Kode Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.innerPanel.softwareInfo p {
+  font-family: "Oxanium", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .innerPanel.gameDevInfo {
   background: linear-gradient(to bottom right, rgb(0, 61, 84), rgb(0, 0, 0));
 }
+.innerPanel.gameDevInfo h2 {
+  font-family: "Gloria Hallelujah", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.innerPanel.gameDevInfo h3 {
+  font-family: "Gloria Hallelujah", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.innerPanel.gameDevInfo p {
+  font-family: "Indie Flower", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .innerPanel.musicInfo {
   background: linear-gradient(to bottom right, rgb(64, 0, 64), rgb(0, 0, 0));
+}
+.innerPanel.musicInfo h2 {
+  font-family: "Aboreto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .innerPanel h2 {
