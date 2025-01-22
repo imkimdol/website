@@ -15,6 +15,7 @@
   margin: 1.25vw 0;
 
   border-radius: 16px;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
 }
 .innerPanel.softwareInfo {
   background: linear-gradient(to bottom right, rgb(0, 50, 0), rgb(0, 0, 0));
