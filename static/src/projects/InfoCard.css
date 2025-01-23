@@ -39,8 +39,13 @@
   max-height: 220px;
   margin: 4px;
 
-  filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.3));
+  filter: saturate(0.7) drop-shadow(0 0px 4px rgba(0, 0, 0, 0.3));
   object-fit: contain;
+
+  transition: filter 0.5s;
+}
+.infoCard:hover img {
+  filter: saturate(1) drop-shadow(0 0px 4px rgba(0, 0, 0, 0.3));
 }
 .infoCard p {
   margin: 8px;
