@@ -22,9 +22,12 @@
   object-fit: contain;
   filter: brightness(0) drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
 
-  transition: filter 0.3s, top 0.3s;
+  transition: filter 0.3s, top 0.1s;
 }
-.footer ul li img:hover{
-  top: -1px;
-  filter: brightness(0.3) drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+.footer ul li img:hover {
+  top: -2px;
+  filter: brightness(0.35) drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+}
+.footer ul li img:active {
+  top: 2px;
 }
