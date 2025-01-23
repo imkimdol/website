@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
 
-  background: rgba(220, 220, 220, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   scale: 0.96;
 
   transition: background 1s, scale .25s;

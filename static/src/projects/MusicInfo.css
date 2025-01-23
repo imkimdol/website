@@ -1,10 +1,10 @@
 .innerPanel.musicInfo {
   /* Created with https://csshero.org/mesher */
-  background-color:#ec99ff;
+  background-color:#e36cd2;
   background-image:
-    radial-gradient(at 9% 30%, hsla(208,69%,65%,1) 0px, transparent 50%),
-    radial-gradient(at 81% 88%, hsla(332,68%,62%,1) 0px, transparent 50%),
-    radial-gradient(at 90% 55%, hsla(303,78%,75%,1) 0px, transparent 50%);
+    radial-gradient(at 9% 30%, hsl(262, 100%, 72%) 0px, transparent 50%),
+    radial-gradient(at 81% 88%, hsl(332, 60%, 70%) 0px, transparent 50%),
+    radial-gradient(at 90% 55%, hsl(284, 100%, 75%) 0px, transparent 50%);
 }
 .innerPanel.musicInfo h2 {
   font-size: 40px;
@@ -16,14 +16,15 @@
 .innerPanel.musicInfo h3 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 
-  font-size: 27px;
+  font-size: 30px;
   font-family: "Dosis", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
 }
 .innerPanel.musicInfo a {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  background: rgba(10, 10, 10, 0.5);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   
   font-family: "Raleway", serif;
   font-optical-sizing: auto;

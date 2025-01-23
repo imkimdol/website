@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
 
-  padding: 30vh 0 0 0;
+  padding: 32vh 0 0 0;
   background: white;
 }
 
@@ -12,22 +12,42 @@
   height: 100%;
   width: 95vw;
 
-  margin: 1.25vw 0;
+  margin: 1.5vw 0;
 
   border-radius: 16px;
-  box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   background-size: 150% 150%;
 
-  filter: brightness(0.9) contrast(0.85) saturate(0.9);
+  filter: brightness(0.9) contrast(0.85) saturate(0.95);
 
-  animation: info-gradient 3s infinite;
+  animation: info-gradient 7s infinite;
   animation-play-state: paused;
-  transition: filter 0.5s;
+  transition: filter 0.4s, box-shadow 0.4s;
 }
 .innerPanel:hover {
+  box-shadow: none;
   filter: brightness(1) contrast(1) saturate(1);
   animation-play-state: running;
 }
+/* .innerPanel:after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  background: inherit;
+  filter: blur(20px) brightness(0.9);
+  will-change: filter;
+
+  z-index: -1;
+  transition: opacity 0.4s;
+}
+.innerPanel:hover::after {
+  opacity: 1;
+} */
 .innerPanel h2 {
   margin: 25px 40px;
 
