@@ -20,7 +20,7 @@
 
   filter: contrast(0.80) saturate(0.85);
 
-  animation: info-gradient 5s infinite;
+  animation: info-gradient 4s linear infinite;
   animation-play-state: paused;
   transition: filter 0.4s, box-shadow 0.4s;
 }
@@ -98,11 +98,17 @@
     background-position: 
       0% 0%,
       0% 0%,
-      100% 0%;
+      0% 0%;
   }
-  50% {
+  33% {
     background-position: 
       100% 100%,
+      0% 100%,
+      100% 0%;
+  }
+  66% {
+    background-position: 
+      0% 100%,
       100% 0%,
       0% 100%;
   }
@@ -110,6 +116,6 @@
     background-position: 
       0% 0%,
       0% 0%,
-      100% 0%;
+      0% 0%;
   }
 }
