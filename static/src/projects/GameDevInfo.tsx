@@ -42,7 +42,7 @@ function UnwateredCrops() {
   return (
     <InfoCard
       title="Unwatered Crops"
-      image={null}
+      image="https://github.com/imkimdol/UnwateredCrops/blob/main/example.png?raw=true"
       desc="A Stardew Valley mod that notifies players of unwatered crops when leaving the farm."
       url="https://github.com/imkimdol/UnwateredCrops"
     />

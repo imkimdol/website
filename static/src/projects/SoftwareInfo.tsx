@@ -44,7 +44,7 @@ function TempoRubato() {
   return (
     <InfoCard
       title="Tempo Rubato"
-      image={null}
+      image="https://github.com/imkimdol/tempo-rubato/blob/main/commands.png?raw=true"
       desc="A Discord bot for playing music with user-defined playrates. Supports streaming, queueing, skipping, and more quality-of-life music streaming features. Uses Discord Player and discord.js as the main framework."
       url="https://github.com/imkimdol/tempo-rubato"
     />

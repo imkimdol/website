@@ -36,15 +36,15 @@
 }
 .infoCard img {
   width: 95%;
+  max-height: 220px;
   margin: 4px;
 
-  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.3));
   object-fit: contain;
 }
 .infoCard p {
   margin: 8px;
 }
-
 .infoCard a {
   margin: 8px;
   margin-bottom: 4px;
