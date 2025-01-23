@@ -1,3 +1,4 @@
+import './GameDevInfo.css';
 import InfoCard from './InfoCard';
 
 export default function GameDevInfo() {

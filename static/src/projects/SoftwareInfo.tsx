@@ -1,3 +1,4 @@
+import './SoftwareInfo.css';
 import InfoCard from './InfoCard';
 
 export default function SoftwareInfo() {

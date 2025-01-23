@@ -5,15 +5,15 @@
 
   padding: 16px;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background: rgba(220, 220, 220, 0.87);
-  scale: 0.95;
+  background: rgba(220, 220, 220, 0.6);
+  scale: 0.96;
 
   transition: background 1s, scale .25s;
 }

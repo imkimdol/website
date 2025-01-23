@@ -16,68 +16,25 @@
 
   border-radius: 16px;
   box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
-}
+  background-size: 150% 150%;
 
-.innerPanel.softwareInfo {
-  background: linear-gradient(to bottom right, rgb(0, 50, 0), rgb(0, 0, 0));
-}
-.innerPanel.softwareInfo h2 {
-  font-family: "Kode Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-.innerPanel.softwareInfo h3 {
-  font-family: "Kode Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-.innerPanel.softwareInfo p {
-  font-family: "Oxanium", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
+  filter: brightness(0.9) contrast(0.85) saturate(0.9);
 
-.innerPanel.gameDevInfo {
-  background: linear-gradient(to bottom right, rgb(0, 61, 84), rgb(0, 0, 0));
+  animation: info-gradient 3s infinite;
+  animation-play-state: paused;
+  transition: filter 0.5s;
 }
-.innerPanel.gameDevInfo h2 {
-  font-family: "Gloria Hallelujah", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.innerPanel:hover {
+  filter: brightness(1) contrast(1) saturate(1);
+  animation-play-state: running;
 }
-.innerPanel.gameDevInfo h3 {
-  font-family: "Gloria Hallelujah", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.innerPanel.gameDevInfo p {
-  font-family: "Indie Flower", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.innerPanel.musicInfo {
-  background: linear-gradient(to bottom right, rgb(64, 0, 64), rgb(0, 0, 0));
-}
-.innerPanel.musicInfo h2 {
-  font-family: "Aboreto", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .innerPanel h2 {
   margin: 25px 40px;
 
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 40px;
+  color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+  transition: color 0.5s;
 }
 
 .cardsOuter {
@@ -114,5 +71,26 @@
   }
   .cards {
     padding-bottom: 16px;
+  }
+}
+
+@keyframes info-gradient {
+  0% {
+    background-position: 
+      0% 0%,
+      0% 0%,
+      100% 0%;
+  }
+  50% {
+    background-position: 
+      100% 100%,
+      100% 0%,
+      0% 100%;
+  }
+  100% {
+    background-position: 
+      0% 0%,
+      0% 0%,
+      100% 0%;
   }
 }

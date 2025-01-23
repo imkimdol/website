@@ -1,3 +1,36 @@
+.innerPanel.musicInfo {
+  /* Created with https://csshero.org/mesher */
+  background-color:#ec99ff;
+  background-image:
+    radial-gradient(at 9% 30%, hsla(208,69%,65%,1) 0px, transparent 50%),
+    radial-gradient(at 81% 88%, hsla(332,68%,62%,1) 0px, transparent 50%),
+    radial-gradient(at 90% 55%, hsla(303,78%,75%,1) 0px, transparent 50%);
+}
+.innerPanel.musicInfo h2 {
+  font-size: 40px;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.innerPanel.musicInfo h3 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+  font-size: 27px;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.innerPanel.musicInfo a {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .musicInfoInner {
   position: relative;
   top: -28px;
@@ -14,7 +47,6 @@
   padding: 0;
   margin: 32px;
 
-  font-size: 28px;
   text-align: center;
   color: white;
 }
