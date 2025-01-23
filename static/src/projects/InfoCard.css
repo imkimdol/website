@@ -33,6 +33,10 @@
   margin: 8px;
   font-size: 24px;
 }
+.infoCard img {
+  width: 100%;
+  object-fit: contain;
+}
 .infoCard p {
   margin: 8px;
 }

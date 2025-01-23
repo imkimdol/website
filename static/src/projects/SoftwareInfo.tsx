@@ -22,6 +22,7 @@ function ThisWebsite() {
   return (
     <InfoCard
       title="Static Webpage"
+      image="/static.png"
       desc="This website consists of two parts - a static webpage and an interactive game. The static section was built with React.js and Create React App. All the visuals and interactions were written in TypeScript, JSX, and plain CSS."
       url="https://github.com/imkimdol/website-source"
     />
@@ -32,6 +33,7 @@ function WorkpianNameBlaster() {
   return (
     <InfoCard
       title="Workpian Name Blaster"
+      image="https://github.com/imkimdol/workpian-name-blaster/blob/main/preview.gif?raw=true"
       desc="A Chromium browser extension for censoring the most common instances of sensitive data found in UBC's Workday and Appian student information platforms. Built to speed up internal documentation processes."
       url="https://github.com/imkimdol/workpian-name-blaster"
     />
@@ -42,6 +44,7 @@ function TempoRubato() {
   return (
     <InfoCard
       title="Tempo Rubato"
+      image={null}
       desc="A Discord bot for playing music with user-defined playrates. Supports streaming, queueing, skipping, and more quality-of-life music streaming features. Uses Discord Player and discord.js as the main framework."
       url="https://github.com/imkimdol/tempo-rubato"
     />
@@ -52,6 +55,7 @@ function LiVer() {
   return (
     <InfoCard
       title="LiVer"
+      image="https://github.com/imkimdol/LiVer/blob/main/README-Preview.png?raw=true"
       desc="A Windows CLI application for managing versions of Ableton Live project files. Automatically copies project files to create new versions and remembers changelogs assigned to every version."
       url="https://github.com/imkimdol/LiVer"
     />
@@ -62,6 +66,7 @@ function ImageBoard() {
   return (
     <InfoCard
       title="Image Board"
+      image="https://github.com/imkimdol/image-board/blob/main/image-board.png?raw=true"
       desc="An image-posting and sharing application similar to popular social media platforms. Uses the popular MongoDB, Express.js, React.js, Node.js (MERN) stack."
       url="https://github.com/imkimdol/image-board"
     />
