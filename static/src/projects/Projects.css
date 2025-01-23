@@ -18,15 +18,14 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   background-size: 150% 150%;
 
-  filter: brightness(0.9) contrast(0.85) saturate(0.95);
+  filter: contrast(0.80) saturate(0.85);
 
-  animation: info-gradient 7s infinite;
+  animation: info-gradient 5s infinite;
   animation-play-state: paused;
   transition: filter 0.4s, box-shadow 0.4s;
 }
 .innerPanel:hover {
-  box-shadow: none;
-  filter: brightness(1) contrast(1) saturate(1);
+  filter: contrast(1) saturate(1);
   animation-play-state: running;
 }
 /* .innerPanel:after {
