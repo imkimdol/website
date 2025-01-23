@@ -6,11 +6,11 @@ export default function GameDevInfo() {
     <div className="innerPanel gameDevInfo">
       <h2>Game Development</h2>
       <div className="cardsOuter">
-        <ul className="cards">
+        <div className="cards">
           <InteractiveWebsite />
           <RhythmGamePrototype />
           <UnwateredCrops />
-        </ul>
+        </div>
       </div>
     </div>
   );

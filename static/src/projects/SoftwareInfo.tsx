@@ -6,13 +6,13 @@ export default function SoftwareInfo() {
     <div className="innerPanel softwareInfo">
       <h2>Software Projects</h2>
       <div className="cardsOuter">
-        <ul className="cards">
+        <div className="cards">
           <ThisWebsite />
           <WorkpianNameBlaster />
           <TempoRubato />
           <LiVer />
           <ImageBoard />
-        </ul>
+        </div>
       </div>
     </div>
   );
