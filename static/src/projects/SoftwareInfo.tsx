@@ -22,7 +22,7 @@ function ThisWebsite() {
   return (
     <InfoCard
       title="Static Webpage"
-      image="/static.png"
+      image="/images/static.png"
       desc="This website consists of two parts - a static webpage and an interactive game. The static section was built with React.js and Create React App. All the visuals and interactions were written in TypeScript, JSX, and plain CSS."
       url="https://github.com/imkimdol/website-source"
     />

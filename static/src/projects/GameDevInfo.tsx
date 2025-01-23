@@ -20,7 +20,7 @@ function InteractiveWebsite() {
   return (
     <InfoCard
       title="Interactive Website"
-      image="/interactive.png"
+      image="/images/interactive.png"
       desc="The interactive portion of this website is built with Godot Engine. It is designed to be a engaging way to learn about my work and my passions."
       url="https://github.com/imkimdol/website-source"
     />
