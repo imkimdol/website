@@ -18,7 +18,7 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   background-size: 150% 150%;
 
-  filter: contrast(0.80) saturate(0.85);
+  filter: contrast(0.8) saturate(0.8);
 
   animation: info-gradient 4s linear infinite;
   animation-play-state: paused;
