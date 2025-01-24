@@ -1,8 +1,33 @@
 import './InfoCard.css';
 
+export enum Tags {
+  HTML = "HTML",
+  TypeScript = "TypeScript",
+  JavaScript = "JavaScript",
+  Reactjs = "React.js",
+  CSS = "CSS",
+  Discordjs = "Discord.js",
+  LevelDB = "LevelDB",
+  CSharp = "C#",
+  DotNET = ".NET",
+  MongoDB = "MongoDB",
+  Expressjs = "Express.js",
+  Nodejs = "Node.js",
+  Godot = "Godot Engine",
+  GDScript = "GDScript",
+  Unity = "Unity",
+  Java = "Java",
+  CPP = "C++",
+  JUCE = "JUCE",
+  AWS = "AWS",
+  WinUI = "WinUI 3",
+  Swift = "Swift",
+  SwiftUI = "SwiftUI",
+};
 interface InfoCardProps {
   title: string,
   image: string | null,
+  tags: Tags[],
   desc: string,
   buttons: ButtonInfo[]
 }
@@ -11,17 +36,25 @@ interface ButtonInfo {
   url: string
 }
 
-export default function InfoCard({title, image, desc, buttons}: InfoCardProps) {
+export function InfoCard({title, image, tags, desc, buttons}: InfoCardProps) {
   return (
     <div className="infoCard">
       <h3>{title}</h3>
       {image && <img src={image} alt=""/>}
+      <TagsList tags={tags}/>
       <p>{desc}</p>
       <Buttons buttons={buttons}/>
     </div>
   );
 };
 
+function TagsList({tags}: {tags: Tags[]}) {
+  return (
+    <div className="tags">
+      {tags.map(t => <p className={t}>{t}</p>)}
+    </div>
+  );
+}
 function Buttons({buttons}: {buttons: ButtonInfo[]}) {
   return (
     <div className="buttons">
