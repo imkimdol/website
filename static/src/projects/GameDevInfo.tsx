@@ -10,6 +10,7 @@ export default function GameDevInfo() {
           <InteractiveWebsite />
           <RhythmGamePrototype />
           <UnwateredCrops />
+          <FuturePlans />
         </div>
       </div>
     </div>
@@ -49,12 +50,15 @@ function UnwateredCrops() {
   );
 };
 
-// function FuturePlans() {
-//   return (
-//     <InfoCard
-//       title="Future Plans"
-//       desc="ASDF"
-//       url={null}
-//     />
-//   );
-// };
+function FuturePlans() {
+  return (
+    <InfoCard
+      title="Future Plans"
+      image={null}
+      desc="Harper will continue to work on his game development and modding skills.
+            He plans to create more mods for his favourite games such as Celeste, Stardew Valley, Rimworld, Minecraft, and more.
+            There are also some small games that are in-progress, so please stay tuned!"
+      url={null}
+    />
+  );
+};

@@ -12,6 +12,7 @@ export default function SoftwareInfo() {
           <TempoRubato />
           <LiVer />
           <ImageBoard />
+          <FuturePlans />
         </div>
       </div>
     </div>
@@ -73,15 +74,18 @@ function ImageBoard() {
   );
 };
 
-// function FuturePlans() {
-//   return (
-//     <InfoCard
-//       title="Future Plans"
-//       desc="ASDF"
-//       url={null}
-//     />
-//   );
-// };
+function FuturePlans() {
+  return (
+    <InfoCard
+      title="Future Plans"
+      image={null}
+      desc="Harper has a handful of new project ideas in the works.
+            He plans to write utility VST plugins for faster music production workflows, build an app for university students, and work with cloud services to remotely host his bots.
+            A whole rework of LiVer with new features, a GUI, and native support for Windows and MacOS is planned as well."
+      url={null}
+    />
+  );
+};
 
 // function DiscordBotHelpers() {
 //   return (
