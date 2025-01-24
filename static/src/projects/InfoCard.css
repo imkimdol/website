@@ -50,9 +50,16 @@
 .infoCard p {
   margin: 8px;
 }
-.infoCard a {
-  margin: 8px;
-  margin-bottom: 4px;
+.infoCard .buttons {
+  margin: 4px 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.infoCard .buttons a {
   padding: 10px 14px;
 
   border-radius: 32px;
@@ -61,6 +68,6 @@
 
   transition: background 0.25s;
 }
-.infoCard a:hover {
+.infoCard .buttons a:hover {
   background: rgba(0, 0, 0, 0.7);
 }

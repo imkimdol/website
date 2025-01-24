@@ -25,7 +25,7 @@ function ThisWebsite() {
       title="Static Webpage"
       image="/images/static.png"
       desc="This website consists of two parts - a static webpage and an interactive game. The static section was built with React.js and Create React App. All the visuals and interactions were written in TypeScript, JSX, and plain CSS."
-      url="https://github.com/imkimdol/website-source"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/website-source" }] }
     />
   );
 };
@@ -36,7 +36,7 @@ function WorkpianNameBlaster() {
       title="Workpian Name Blaster"
       image="https://github.com/imkimdol/workpian-name-blaster/blob/main/preview.gif?raw=true"
       desc="A Chromium browser extension for censoring the most common instances of sensitive data found in UBC's Workday and Appian student information platforms. Built to speed up internal documentation processes."
-      url="https://github.com/imkimdol/workpian-name-blaster"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/workpian-name-blaster" }] }
     />
   );
 };
@@ -47,7 +47,7 @@ function TempoRubato() {
       title="Tempo Rubato"
       image="https://github.com/imkimdol/tempo-rubato/blob/main/commands.png?raw=true"
       desc="A Discord bot for playing music with user-defined playrates. Supports streaming, queueing, skipping, and more quality-of-life music streaming features. Uses Discord Player and discord.js as the main framework."
-      url="https://github.com/imkimdol/tempo-rubato"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/tempo-rubato" }] }
     />
   );
 };
@@ -58,7 +58,7 @@ function LiVer() {
       title="LiVer"
       image="https://github.com/imkimdol/LiVer/blob/main/README-Preview.png?raw=true"
       desc="A Windows CLI application for managing versions of Ableton Live project files. Automatically copies project files to create new versions and remembers changelogs assigned to every version."
-      url="https://github.com/imkimdol/LiVer"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/LiVer" }] }
     />
   );
 }
@@ -69,7 +69,7 @@ function ImageBoard() {
       title="Image Board"
       image="https://github.com/imkimdol/image-board/blob/main/image-board.png?raw=true"
       desc="An image-posting and sharing application similar to popular social media platforms. Uses the popular MongoDB, Express.js, React.js, Node.js (MERN) stack."
-      url="https://github.com/imkimdol/image-board"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/image-board" }] }
     />
   );
 };
@@ -82,7 +82,7 @@ function FuturePlans() {
       desc="Harper has a handful of new project ideas in the works.
             He plans to write utility VST plugins for faster music production workflows, build an app for university students, and work with cloud services to remotely host his bots.
             A whole rework of LiVer with new features, a GUI, and native support for Windows and MacOS is planned as well."
-      url={null}
+      buttons={[]}
     />
   );
 };

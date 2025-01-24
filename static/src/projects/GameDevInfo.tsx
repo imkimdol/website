@@ -23,7 +23,7 @@ function InteractiveWebsite() {
       title="Interactive Website"
       image="/images/interactive.png"
       desc="The interactive portion of this website is built with Godot Engine. It is designed to be a engaging way to learn about my work and my passions."
-      url="https://github.com/imkimdol/website-source"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/website-source" }] }
     />
   );
 };
@@ -34,7 +34,7 @@ function RhythmGamePrototype() {
       title="Rhythm Game Prototype"
       image="https://github.com/imkimdol/rhythm-game-prototype/blob/main/example.png?raw=true"
       desc="A prototype for a basic rhythm game. Built with Godot Engine and created for the UBC Game Dev club."
-      url="https://github.com/imkimdol/rhythm-game-prototype"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/rhythm-game-prototype" }] }
     />
   );
 };
@@ -45,7 +45,7 @@ function UnwateredCrops() {
       title="Unwatered Crops"
       image="https://github.com/imkimdol/UnwateredCrops/blob/main/example.png?raw=true"
       desc="A Stardew Valley mod that notifies players of unwatered crops when leaving the farm."
-      url="https://github.com/imkimdol/UnwateredCrops"
+      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/UnwateredCrops" }] }
     />
   );
 };
@@ -58,7 +58,7 @@ function FuturePlans() {
       desc="Harper will continue to work on his game development and modding skills.
             He plans to create more mods for his favourite games such as Celeste, Stardew Valley, Rimworld, Minecraft, and more.
             There are also some small games that are in-progress, so please stay tuned!"
-      url={null}
+      buttons={[]}
     />
   );
 };
