@@ -12,6 +12,7 @@ export default function SoftwareInfo() {
           <TempoRubato />
           <LiVer />
           <ImageBoard />
+          <DiscordBotHelpers />
           <FuturePlans />
         </div>
       </div>
@@ -74,6 +75,22 @@ function ImageBoard() {
   );
 };
 
+function DiscordBotHelpers() {
+  return (
+    <InfoCard
+      title="Discord Bot Helpers"
+      image={null}
+      desc="Simple utilities to automate and simplify tasks. They are created as Discord bots when the functionality of the project is too simple to justify a dedicated user interface. Supports application commands."
+      buttons={[
+        { text: "WOL", url: "https://github.com/imkimdol/discord-wol" },
+        { text: "Roulette", url: "https://github.com/imkimdol/discord-roulette" },
+        { text: "Scheduler", url: "https://github.com/imkimdol/discord-scheduler" },
+        { text: "Minecraft Server Status Checker", url: "https://github.com/imkimdol/minecraft-server-status-checker" },
+      ]}
+    />
+  );
+};
+
 function FuturePlans() {
   return (
     <InfoCard
@@ -86,39 +103,3 @@ function FuturePlans() {
     />
   );
 };
-
-// function DiscordBotHelpers() {
-//   return (
-//     <li className="discordBotHelpers">
-//       <h3>Discord Bot Helpers</h3>
-//       <p>
-//       </p>
-//       <ul>
-//         <li>
-//           <h4>Discord WOL</h4>
-//           <p>
-//           </p>
-//           <a href="https://github.com/imkimdol/discord-wol" target="_blank" rel="noreferrer">Github</a>
-//         </li>
-//         <li>
-//           <h4>Discord Roulette</h4>
-//           <p>
-//           </p>
-//           <a href="https://github.com/imkimdol/discord-roulette" target="_blank" rel="noreferrer">Github</a>
-//         </li>
-//         <li>
-//           <h4>Discord Scheduler</h4>
-//           <p>
-//           </p>
-//           <a href="https://github.com/imkimdol/discord-scheduler" target="_blank" rel="noreferrer">Github</a>
-//         </li>
-//         <li>
-//           <h4>Minecraft Server Status Checker</h4>
-//           <p>
-//           </p>
-//           <a href="https://github.com/imkimdol/minecraft-server-status-checker" target="_blank" rel="noreferrer">Github</a>
-//         </li>
-//       </ul>
-//     </li>
-//   );
-// };
