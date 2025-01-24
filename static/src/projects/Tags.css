@@ -1,0 +1,98 @@
+.infoCard .tags .HTML {
+  color: hsla(12, 77%, 52%, 1);
+}
+.infoCard .tags .TypeScript {
+  color: hsla(211, 60%, 48%, 1);
+}
+.infoCard .tags .JavaScript {
+  color: rgb(228, 206, 39);
+}
+.infoCard .tags .React\.js {
+  color: hsl(193, 50%, 53%);
+}
+.infoCard .tags .CSS {
+  color: rgb(31, 98, 176);
+}
+.infoCard .tags .Discord\.js {
+  color: hsla(235, 86%, 65%, 1);
+}
+.infoCard .tags .LevelDB {
+  color: rgb(98, 152, 1);
+}
+.infoCard .tags .C\# {
+  color: hsla(253, 66%, 50%, 1);
+}
+.infoCard .tags .\.NET {
+  color: hsla(253, 66%, 50%, 1);
+}
+.infoCard .tags .MongoDB {
+  color: rgb(29, 139, 56);
+}
+.infoCard .tags .Express\.js {
+  color: rgb(50, 50, 50);
+}
+.infoCard .tags .Node\.js {
+  color: rgb(117, 186, 39);
+}
+.infoCard .tags .Godot {
+  color: rgb(63, 125, 172);
+}
+.infoCard .tags .GDScript {
+  color: rgb(63, 125, 172);
+}
+.infoCard .tags .Unity {
+  color: rgb(50, 50, 50);
+}
+.infoCard .tags .Java {
+  color: rgb(236, 33, 37);
+}
+.infoCard .tags .C\+\+ {
+  color: hsla(206, 100%, 31%, 1);
+}
+.infoCard .tags .JUCE {
+  color: rgb(111, 162, 44);
+}
+.infoCard .tags .AWS {
+  color: rgb(243, 148, 14);
+}
+.infoCard .tags .WinUI {
+  color: hsla(207, 100%, 42%, 1);
+}
+.infoCard .tags .Swift {
+  color: hsla(8, 86%, 58%, 1);
+}
+.infoCard .tags .SwiftUI {
+  color: hsla(8, 86%, 58%, 1);
+}
+
+.infoCard .tags {
+  margin: 4px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.infoCard .tags p {
+  margin: 0;
+  padding: 4px 6px;
+
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 0 2px rgba(0,0,0,0.1);
+
+  transition: background 0.25s;
+}
+.infoCard:hover .tags p {
+  background: rgba(255, 255, 255, 1);
+}
+.infoCard .tags p:hover {
+  background: rgba(220, 220, 220, 0.5);
+}

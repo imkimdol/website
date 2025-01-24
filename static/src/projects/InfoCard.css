@@ -18,7 +18,7 @@
   transition: background 1s, scale .25s;
 }
 .infoCard:hover {
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.9);
   scale: 0.97;
 }
 @media screen and (max-width: 600px) {
@@ -47,34 +47,6 @@
 }
 .infoCard:hover img {
   filter: saturate(1) drop-shadow(0 0px 4px rgba(0, 0, 0, 0.3));
-}
-
-.infoCard .tags {
-  margin: 4px;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-.infoCard .tags p {
-  margin: 0;
-  padding: 4px 6px;
-
-  border-radius: 6px;
-  background: rgba(10, 10, 10, 0.6);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-
-  font-size: 12px;
-  font-weight: 500;
-  color: white;
-
-  transition: background 0.25s;
-}
-.infoCard .tags p:hover {
-  background: rgba(10, 10, 10, 0.5);
 }
 
 

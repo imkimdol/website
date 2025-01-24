@@ -1,4 +1,5 @@
 import './InfoCard.css';
+import './Tags.css';
 
 export enum Tags {
   HTML = "HTML",
