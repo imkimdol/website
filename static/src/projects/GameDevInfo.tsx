@@ -35,7 +35,7 @@ function RhythmGamePrototype() {
       title="Rhythm Game Prototype"
       image="https://github.com/imkimdol/rhythm-game-prototype/blob/main/example.png?raw=true"
       tags={[Tags.Godot, Tags.GDScript]}
-      desc="A prototype for a basic rhythm game. Built with Godot Engine and created for the UBC Game Dev club."
+      desc="A prototype for a basic rhythm game. Features a fully-featured map editor with note editing, copying, pasting, BPM adjustments, and more. Created for the UBC Game Dev club."
       buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/rhythm-game-prototype" }] }
     />
   );
