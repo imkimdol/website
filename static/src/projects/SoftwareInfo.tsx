@@ -26,7 +26,7 @@ function ThisWebsite() {
       title="Static Webpage"
       image="/images/static.png"
       tags={[Tags.TypeScript, Tags.HTML, Tags.CSS, Tags.Reactjs, Tags.Nodejs]}
-      desc="This website consists of two parts - a static webpage and an interactive game. The static section was built with Create React App. All the visuals and interactions were written from scratch in TypeScript, JSX, and plain CSS."
+      desc="This website consists of two parts - a static webpage and an interactive game. The static section was built with Create React App. All the visuals and interactions were written from scratch in HTML (JSX) and plain CSS."
       buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/website-source" }] }
     />
   );
@@ -62,7 +62,7 @@ function LiVer() {
       title="LiVer"
       image="https://github.com/imkimdol/LiVer/blob/main/README-Preview.png?raw=true"
       tags={[Tags.CSharp, Tags.DotNET]}
-      desc="A Windows CLI application for managing versions of Ableton Live project files. Aims to solve the time-consuming process of keeping track of changes between different song versions. Comes with quality-of-life features that focuses on documentation, traceability, and version comparisons."
+      desc="A Windows CLI application for managing versions of Ableton Live project files. Aims to solve the time-consuming process of keeping track of changes between different song versions. Comes with management features that focuses on documentation, traceability, and version comparisons."
       buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/LiVer" }] }
     />
   );
@@ -74,7 +74,7 @@ function ImageBoard() {
       title="Image Board"
       image="https://github.com/imkimdol/image-board/blob/main/image-board.png?raw=true"
       tags={[Tags.MongoDB, Tags.Expressjs, Tags.Reactjs, Tags.Nodejs, Tags.JavaScript, Tags.HTML, Tags.CSS]}
-      desc="An image-posting and sharing application similar to popular social media platforms. Uses the popular MongoDB, Express.js, React.js, Node.js (MERN) stack."
+      desc="An image-posting and sharing application similar to popular social media platforms. Built using the popular MERN stack."
       buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/image-board" }] }
     />
   );

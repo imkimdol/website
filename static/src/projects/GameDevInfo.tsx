@@ -7,6 +7,7 @@ export default function GameDevInfo() {
       <h2>Game Development</h2>
       <div className="cardsOuter">
         <div className="cards">
+          <SnakesLaddersAndYut />
           <InteractiveWebsite />
           <RhythmGamePrototype />
           <UnwateredCrops />
@@ -23,8 +24,26 @@ function InteractiveWebsite() {
       title="Interactive Website"
       image="/images/interactive.png"
       tags={[Tags.Godot, Tags.GDScript]}
-      desc="The interactive portion of this website is built with Godot Engine. It is designed to be a engaging way to learn about my work and my passions."
-      buttons={ [{ text: "GitHub", url: "https://github.com/imkimdol/website-source" }] }
+      desc="The interactive portion of this website is built with Godot Engine. It is designed to be an entertaining way to learn about my work and my passions."
+      buttons={[
+        { text: "Try it!", url: "https://harperkim.ca/interactive" },
+        { text: "GitHub", url: "https://github.com/imkimdol/website-source" }
+      ]}
+    />
+  );
+};
+
+function SnakesLaddersAndYut() {
+  return (
+    <InfoCard
+      title="Snakes, Ladders, and Yut?"
+      image="https://github.com/imkimdol/SnakesLaddersAndYut/blob/main/example.png?raw=true"
+      tags={[Tags.Godot, Tags.GDScript]}
+      desc="A board game visualizer that combines Snakes and Ladders and the korean board game Yut. Supports 8 players and is designed to be played with real Yut dice. A fully randomized board and player list is generated every time the game is played."
+      buttons={[
+        { text: "Demo Video", url: "https://youtu.be/Hcsz7XZSPEA" },
+        { text: "GitHub", url: "https://github.com/imkimdol/SnakesLaddersAndYut" }
+      ]}
     />
   );
 };
