@@ -76,6 +76,8 @@
   gap: 8px;
 }
 .infoCard .tags p {
+  position: relative;
+  top: 0;
   margin: 0;
   padding: 4px 6px;
 
@@ -88,11 +90,12 @@
   color: white;
   text-shadow: 0 0 2px rgba(0,0,0,0.1);
 
-  transition: background 0.25s;
+  transition: background 0.25s, top 0.25s;
 }
 .infoCard:hover .tags p {
   background: rgba(255, 255, 255, 1);
 }
 .infoCard .tags p:hover {
+  top: 1px;
   background: rgba(220, 220, 220, 0.5);
 }
