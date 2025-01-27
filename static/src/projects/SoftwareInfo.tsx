@@ -86,7 +86,7 @@ function DiscordBotHelpers() {
       title="Discord Bot Helpers"
       image={null}
       tags={[Tags.TypeScript, Tags.JavaScript, Tags.Discordjs, Tags.Nodejs]}
-      desc="Simple utilities to automate and simplify tasks. These projects are converted into Discord bots when the scope of the project is too simple to justify a dedicated user interface."
+      desc="Simple utilities to automate and simplify tasks. These projects are converted into Discord bots when the scope of the project is too small to justify a dedicated user interface."
       buttons={[
         { text: "WOL", url: "https://github.com/imkimdol/discord-wol" },
         { text: "Roulette", url: "https://github.com/imkimdol/discord-roulette" },
