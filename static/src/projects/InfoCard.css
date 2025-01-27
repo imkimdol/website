@@ -84,6 +84,6 @@
   background: rgba(255, 255, 255, 0.9);
 }
 .infoCard .buttons a:hover {
-  top: 2px;
+  top: 1px;
   background: rgba(220, 220, 220, 0.3);
 }
