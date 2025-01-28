@@ -21,29 +21,6 @@ func _process(delta):
 	$CanvasLayer/MarginContainer.position.y = $CanvasLayer/MarginContainer.size.y * rect_relative_y_pos
 
 
-func _on_projects_cutscene_trigger_1_body_entered(body):
-	if not returning:
-		$Player.controllable = false
-		$Player.direction_override = Vector2.LEFT
-	else:
-		await get_tree().create_timer(0.5).timeout
-		returning = false
-		$Player.controllable = true
-
-func _on_projects_cutscene_trigger_2_body_entered(body):
-	$Player.direction_override = Vector2.ZERO
-	$CutsceneAnimator.play("projects_cutscene")
-	await $CutsceneAnimator.animation_finished
-	Global.open_link("https://harperkim.ca/interactive/software")
-	
-	await get_tree().create_timer(0.5).timeout
-	
-	$CutsceneAnimator.play_backwards("projects_cutscene")
-	await $CutsceneAnimator.animation_finished
-	returning = true
-	$Player.direction_override = Vector2.RIGHT
-
-
 func _on_music_cutscene_trigger_1_body_entered(body):
 	if not returning:
 		$Player.controllable = false
