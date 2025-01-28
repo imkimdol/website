@@ -17,4 +17,5 @@ func _on_proceed_pressed() -> void:
 	Global.load_main_scene()
 
 func _on_go_back_pressed() -> void:
-	Global.open_link("https://harperkim.ca")
+	if OS.has_feature('web'):
+		JavaScriptBridge.eval("window.location.href='https://harperkim.ca'")
