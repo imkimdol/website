@@ -3,6 +3,7 @@ class_name Door extends StaticBody2D
 @export var hyperlink := "https://harperkim.ca"
 @export var player: Player
 @export var cutscene_animation: AnimationPlayer
+@export var is_ladder: bool = false
 var player_entered := false
 
 func _process(delta):
@@ -12,7 +13,8 @@ func _process(delta):
 func on_door_interact():
 	player.controllable = false
 	player.direction_override = Vector2.ZERO
-	self.visible = false
+	if not is_ladder:
+		self.visible = false
 	cutscene_animation.play("warp_cutscene")
 	
 	await cutscene_animation.animation_finished

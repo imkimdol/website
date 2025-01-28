@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dw70otu5lwj2c" path="res://assets/Tiny Town/Tiles/tile_0103.png" id="2_6tb6n"]
 
 [node name="Ladder" instance=ExtResource("1_1tum1")]
+is_ladder = true
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_6tb6n")
