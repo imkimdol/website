@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=34 format=4 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
@@ -16,10 +16,13 @@
 [ext_resource type="FontFile" uid="uid://b1x6371sqsmd1" path="res://assets/Rubik font/static/Rubik-Light.ttf" id="14_4hwgo"]
 [ext_resource type="Shader" uid="uid://cpnokahpnyj0n" path="res://cutscene_shader.tres" id="14_cqiup"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdp3"]
-size = Vector2(32, 128)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qg4y7"]
+size = Vector2(224, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ka4"]
+size = Vector2(224, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdp3"]
 size = Vector2(32, 128)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhnas"]
@@ -550,6 +553,22 @@ position = Vector2(-128, -456)
 scale = Vector2(4, 4)
 text = "« To Software Projects"
 
+[node name="CameraBoundsTriggerR" type="Area2D" parent="Interactables/Projects"]
+position = Vector2(32, -784)
+collision_layer = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Projects/CameraBoundsTriggerR"]
+shape = SubResource("RectangleShape2D_qg4y7")
+
+[node name="CameraBoundsTriggerL" type="Area2D" parent="Interactables/Projects"]
+position = Vector2(32, -432)
+collision_layer = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Projects/CameraBoundsTriggerL"]
+shape = SubResource("RectangleShape2D_c8ka4")
+
 [node name="Music" type="Node2D" parent="Interactables"]
 
 [node name="MusicSign" parent="Interactables/Music" instance=ExtResource("9_fi07t")]
@@ -640,10 +659,10 @@ script = ExtResource("1_kbqtd")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -96)
 process_callback = 0
-limit_left = -1088
-limit_top = -2016
+limit_left = -2816
+limit_top = -1120
 limit_right = 1152
-limit_bottom = 608
+limit_bottom = 609
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 rotation_smoothing_enabled = true
@@ -782,5 +801,7 @@ autoplay = "cycle"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vjw4m")
 
+[connection signal="body_entered" from="Interactables/Projects/CameraBoundsTriggerR" to="Player/Camera2D" method="_on_camera_trigger_r_body_entered"]
+[connection signal="body_entered" from="Interactables/Projects/CameraBoundsTriggerL" to="Player/Camera2D" method="_on_camera_trigger_l_body_entered"]
 [connection signal="body_entered" from="Interactables/Music/MusicCutsceneTrigger1" to="." method="_on_music_cutscene_trigger_1_body_entered"]
 [connection signal="body_entered" from="Interactables/Music/MusicCutsceneTrigger2" to="." method="_on_music_cutscene_trigger_2_body_entered"]

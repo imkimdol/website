@@ -20,3 +20,12 @@ trans: Tween.TransitionType = Tween.TRANS_LINEAR):
 	tween.set_ease(ease)
 	tween.set_trans(trans)
 	tween.tween_property(self, "zoom", amount, duration)
+
+
+func _on_camera_trigger_r_body_entered(body: Node2D) -> void:
+		limit_left = -1088
+		limit_top = -2016
+
+func _on_camera_trigger_l_body_entered(body: Node2D) -> void:
+		limit_left = -2816
+		limit_top = -1120
