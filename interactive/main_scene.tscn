@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://doupl4bwkdeat"]
+[gd_scene load_steps=37 format=4 uid="uid://doupl4bwkdeat"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_kbqtd"]
 [ext_resource type="Script" path="res://main_scene.gd" id="1_u3254"]
@@ -25,6 +25,9 @@ size = Vector2(224, 32)
 size = Vector2(224, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdp3"]
+size = Vector2(32, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuwab"]
 size = Vector2(32, 128)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhnas"]
@@ -586,7 +589,7 @@ collision_layer = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/Music/MusicCutsceneTrigger2"]
-shape = SubResource("RectangleShape2D_c8ka4")
+shape = SubResource("RectangleShape2D_wuwab")
 
 [node name="LinkedIn" type="Node2D" parent="Interactables"]
 
