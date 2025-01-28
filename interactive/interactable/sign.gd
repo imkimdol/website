@@ -16,7 +16,8 @@ func _ready():
 		desc_label.get_parent().queue_free()
 	else:
 		$InteractionLabel/FloatAnimation.stop()
-		$InteractionLabel/FloatAnimation.play("float", -1, 0.5)
+		$InteractionLabel/FloatAnimation.play("float", -1, 0.3)
+		$InteractionLabel/HBoxContainer/Container/ColorRect.color = Color(0,0,0,0.75)
 		desc_label.text = desc
 
 func _on_area_2d_body_entered(body):
