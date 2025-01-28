@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3mw4vftbuek8"]
+
+[ext_resource type="PackedScene" uid="uid://bmwmsf8kert2" path="res://interactable/door.tscn" id="1_1tum1"]
+[ext_resource type="Texture2D" uid="uid://dw70otu5lwj2c" path="res://assets/Tiny Town/Tiles/tile_0103.png" id="2_6tb6n"]
+
+[node name="Ladder" instance=ExtResource("1_1tum1")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_6tb6n")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0)
