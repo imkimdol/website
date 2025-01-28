@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmwmsf8kert2"]
 
-[ext_resource type="Script" path="res://door.gd" id="1_ifofk"]
-[ext_resource type="Texture2D" uid="uid://d01se7owchmv5" path="res://assets/Tiny Town/door_cropped.png" id="2_lp680"]
+[ext_resource type="Script" path="res://interactable/door.gd" id="1_ifofk"]
+[ext_resource type="Texture2D" uid="uid://d01se7owchmv5" path="res://assets/Tiny Town/Tiles/door_cropped.png" id="2_lp680"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7cbp0"]
 

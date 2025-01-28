@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://b214l8eg7ep77"]
+[gd_scene load_steps=8 format=3 uid="uid://b7dayc6n1vkqn"]
 
-[ext_resource type="Texture2D" uid="uid://bk7rx8aqcclua" path="res://assets/Tiny Town/Tiles/tile_0083.png" id="1_22nhh"]
-[ext_resource type="Script" path="res://sign.gd" id="1_513hb"]
-[ext_resource type="FontFile" uid="uid://c3aghilr8sdde" path="res://assets/Rubik font/static/Rubik-Regular.ttf" id="3_ml03n"]
+[ext_resource type="Script" path="res://interactable/informant.gd" id="1_6y0i4"]
+[ext_resource type="Texture2D" uid="uid://bk7rx8aqcclua" path="res://assets/Tiny Town/Tiles/tile_0083.png" id="2_06vlj"]
+[ext_resource type="Texture2D" uid="uid://bjh48txv1nfmj" path="res://assets/Xelu Controller Prompts/Keyboard & Mouse/Light/E_Key_Light.png" id="3_gixrd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrn8e"]
 size = Vector2(14, 11)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7cbp0"]
-radius = 18.0
+radius = 16.0
 
 [sub_resource type="Animation" id="Animation_y75y4"]
 resource_name = "float"
@@ -32,13 +32,12 @@ _data = {
 "float": SubResource("Animation_y75y4")
 }
 
-[node name="Sign" type="StaticBody2D"]
-z_index = 1
-collision_layer = 0
-script = ExtResource("1_513hb")
+[node name="Informant" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_6y0i4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_22nhh")
+texture = ExtResource("2_06vlj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
@@ -51,36 +50,27 @@ collision_layer = 0
 shape = SubResource("CircleShape2D_7cbp0")
 
 [node name="InteractionLabel" type="Node2D" parent="."]
-position = Vector2(0, -2)
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -1.4357)
 scale = Vector2(0.1, 0.1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="InteractionLabel"]
-z_index = 2
-offset_left = -510.0
+z_index = 1
+offset_left = -115.0
 offset_top = -190.0
-offset_right = 510.0
+offset_right = 139.0
 offset_bottom = -90.0
 size_flags_horizontal = 4
-alignment = 1
 
-[node name="Container" type="MarginContainer" parent="InteractionLabel/HBoxContainer"]
+[node name="Label" type="Label" parent="InteractionLabel/HBoxContainer"]
 layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="InteractionLabel/HBoxContainer/Container"]
-layout_mode = 2
-color = Color(0, 0, 0, 0.498039)
-
-[node name="MarginContainer" type="MarginContainer" parent="InteractionLabel/HBoxContainer/Container"]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_right = 15
-
-[node name="Label" type="Label" parent="InteractionLabel/HBoxContainer/Container/MarginContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_ml03n")
 theme_override_font_sizes/font_size = 58
-text = "Sign Text"
+text = "Press"
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="InteractionLabel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_gixrd")
 
 [node name="FloatAnimation" type="AnimationPlayer" parent="InteractionLabel"]
 libraries = {
