@@ -43,7 +43,7 @@ export function InfoCard({title, image, tags, desc, buttons}: InfoCardProps) {
   return (
     <div className="infoCard">
       <h3>{title}</h3>
-      {image && <img src={image} alt=""/>}
+      {image && <a href={image} target="_blank" rel="noreferrer"><img src={image} alt=""/></a>}
       <TagsList tags={tags}/>
       <p>{desc}</p>
       <Buttons buttons={buttons}/>
