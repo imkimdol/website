@@ -64,6 +64,12 @@
 .infoCard .tags .SwiftUI {
   color: hsla(8, 86%, 58%, 1);
 }
+.infoCard .tags .Next\.js {
+  color: rgb(50, 50, 50);
+}
+.infoCard .tags .Tailwind\ CSS {
+  color: rgb(0, 166, 244);
+}
 
 .infoCard .tags {
   margin: 4px;

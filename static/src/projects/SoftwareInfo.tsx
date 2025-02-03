@@ -7,6 +7,7 @@ export default function SoftwareInfo() {
       <h2>Software Projects</h2>
       <div className="cardsOuter">
         <div className="cards">
+          <OllamaWebUI />
           <ThisWebsite />
           <WorkpianNameBlaster />
           <TempoRubato />
@@ -17,6 +18,21 @@ export default function SoftwareInfo() {
         </div>
       </div>
     </div>
+  );
+};
+
+function OllamaWebUI() {
+  return (
+    <InfoCard
+      title="Ollama WebUI"
+      image="https://github.com/imkimdol/ollama-webui/blob/main/example.png?raw=true"
+      tags={[Tags.Nextjs, Tags.TailwindCSS, Tags.Reactjs, Tags.Nodejs, Tags.TypeScript, Tags.HTML]}
+      desc="A browser-based chat client for the Ollama API. Supports message streaming, model selection, multiple chat threads, local chat storage, message editing, and more. Built to be hosted easily on local web servers."
+      buttons={[
+        { text: "Demo Video", url: "https://youtu.be/6f0zhikFn08" },
+        { text: "GitHub", url: "https://github.com/imkimdol/ollama-webui" },
+      ]}
+    />
   );
 };
 
@@ -88,7 +104,8 @@ function DiscordBotHelpers() {
       tags={[Tags.TypeScript, Tags.JavaScript, Tags.Discordjs, Tags.Nodejs]}
       desc="Simple utilities to automate and simplify tasks. These projects are converted into Discord bots when the scope of the project is too small to justify a dedicated user interface."
       buttons={[
-        { text: "WOL", url: "https://github.com/imkimdol/discord-wol" },
+        { text: "Ollama Client", url: "https://github.com/imkimdol/discord-ollama" },
+        { text: "Wake-on-LAN", url: "https://github.com/imkimdol/discord-wol" },
         { text: "Roulette", url: "https://github.com/imkimdol/discord-roulette" },
         { text: "Scheduler", url: "https://github.com/imkimdol/discord-scheduler" },
         { text: "Minecraft Server Status Checker", url: "https://github.com/imkimdol/minecraft-server-status-checker" },

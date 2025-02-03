@@ -24,6 +24,8 @@ export enum Tags {
   WinUI = "WinUI 3",
   Swift = "Swift",
   SwiftUI = "SwiftUI",
+  Nextjs = "Next.js",
+  TailwindCSS = "Tailwind CSS",
 };
 interface InfoCardProps {
   title: string,
