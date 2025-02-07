@@ -54,14 +54,14 @@ export function InfoCard({title, image, tags, desc, buttons}: InfoCardProps) {
 function TagsList({tags}: {tags: Tags[]}) {
   return (
     <div className="tags">
-      {tags.map(t => <p className={t}>{t}</p>)}
+      {tags.map(t => <p key={t} className={t}>{t}</p>)}
     </div>
   );
 }
 function Buttons({buttons}: {buttons: ButtonInfo[]}) {
   return (
     <div className="buttons">
-      {buttons.map(b => <a href={b.url} target="_blank" rel="noreferrer">{b.text}</a>)}
+      {buttons.map(b => <a key={b.url} href={b.url} target="_blank" rel="noreferrer">{b.text}</a>)}
     </div>
   );
 }
