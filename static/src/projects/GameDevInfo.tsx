@@ -77,7 +77,7 @@ function FuturePlans() {
     <InfoCard
       title="Future Plans"
       image={null}
-      tags={[Tags.CSharp, Tags.DotNET, Tags.Unity, Tags.Java, Tags.Godot, Tags.GDScript]}
+      tags={[Tags.UnrealEngine, Tags.CPP, Tags.CSharp, Tags.DotNET, Tags.Unity, Tags.Java, Tags.Godot, Tags.GDScript]}
       desc="Harper will continue to work on his game development and modding skills.
             He plans to create more mods for his favourite games such as Celeste, Stardew Valley, Rimworld, and Minecraft.
             There are also some small games that are in-progress, so please stay tuned!"

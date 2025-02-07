@@ -34,7 +34,7 @@
 .infoCard .tags .Node\.js {
   color: rgb(117, 186, 39);
 }
-.infoCard .tags .Godot {
+.infoCard .tags .Godot-Engine {
   color: rgb(63, 125, 172);
 }
 .infoCard .tags .GDScript {
@@ -67,8 +67,11 @@
 .infoCard .tags .Next\.js {
   color: rgb(50, 50, 50);
 }
-.infoCard .tags .Tailwind\ CSS {
+.infoCard .tags .Tailwind-CSS {
   color: rgb(0, 166, 244);
+}
+.infoCard .tags .Unreal-Engine  {
+  color: rgb(50, 50, 50);
 }
 
 .infoCard .tags {

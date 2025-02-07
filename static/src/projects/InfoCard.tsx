@@ -26,6 +26,7 @@ export enum Tags {
   SwiftUI = "SwiftUI",
   Nextjs = "Next.js",
   TailwindCSS = "Tailwind CSS",
+  UnrealEngine = "Unreal Engine"
 };
 interface InfoCardProps {
   title: string,
@@ -54,7 +55,7 @@ export function InfoCard({title, image, tags, desc, buttons}: InfoCardProps) {
 function TagsList({tags}: {tags: Tags[]}) {
   return (
     <div className="tags">
-      {tags.map(t => <p key={t} className={t}>{t}</p>)}
+      {tags.map(t => <p key={t} className={t.replace(' ', '-')}>{t}</p>)}
     </div>
   );
 }
