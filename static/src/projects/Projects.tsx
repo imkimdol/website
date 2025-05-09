@@ -9,7 +9,7 @@ export default function Projects() {
     <section className="projects">
       <SoftwareInfo />
       <GameDevInfo />
-      <div className="music-contact">
+      <div className="musicContact">
         <MusicInfo />
         <Contact />
       </div>

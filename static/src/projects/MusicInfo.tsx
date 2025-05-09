@@ -4,7 +4,7 @@ export default function MusicInfo() {
   return (
     <div className="innerPanel musicInfo">
       <h2>Music Production</h2>
-      <div className="musicInfoInner">
+      <div className="innerPanelInner">
         <h3>
           Harper is producing music under the alias Kimdol.
         </h3>

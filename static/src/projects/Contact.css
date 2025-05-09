@@ -6,44 +6,7 @@
     radial-gradient(at 81% 88%, hsl(332, 47%, 70%) 0px, transparent 50%),
     radial-gradient(at 90% 55%, hsl(284, 64%, 75%) 0px, transparent 50%);
 }
-.innerPanel.contact h2 {
-  font-size: 40px;
-  font-family: "Dosis", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-.innerPanel.contact h3 {
+
+.musicContact .contact h3 {
   font-size: 30px;
-  font-family: "Dosis", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-
-  margin: 0px 40px;
-}
-.innerPanel.contact a {
-  font-size: 17px;
-  font-family: "Raleway", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.contactInner {
-  position: relative;
-  height: 100%;
-  top: -16px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-}
-.contactInner h3 {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-
-  text-align: center;
-  color: white;
 }

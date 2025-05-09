@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="innerPanel contact">
       <h2>Contact</h2>
-      <div className="contactInner">
+      <div className="innerPanelInner">
         <h3>
           Feel free to reach out!
         </h3>
