@@ -1,4 +1,4 @@
-.innerPanel.musicInfo {
+.innerPanel.contact {
   /* Created with https://csshero.org/mesher */
   background-color:#e36cd2;
   background-image:
@@ -6,15 +6,15 @@
     radial-gradient(at 81% 88%, hsl(332, 47%, 70%) 0px, transparent 50%),
     radial-gradient(at 90% 55%, hsl(284, 64%, 75%) 0px, transparent 50%);
 }
-.innerPanel.musicInfo h2 {
+.innerPanel.contact h2 {
   font-size: 40px;
   font-family: "Dosis", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
-.innerPanel.musicInfo h3 {
-  font-size: 25px;
+.innerPanel.contact h3 {
+  font-size: 30px;
   font-family: "Dosis", serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -22,7 +22,7 @@
 
   margin: 0px 40px;
 }
-.innerPanel.musicInfo a {
+.innerPanel.contact a {
   font-size: 17px;
   font-family: "Raleway", serif;
   font-optical-sizing: auto;
@@ -30,7 +30,7 @@
   font-style: normal;
 }
 
-.musicInfoInner {
+.contactInner {
   position: relative;
   height: 100%;
   top: -16px;
@@ -41,7 +41,7 @@
   align-items: center;
   gap: 32px;
 }
-.musicInfoInner h3 {
+.contactInner h3 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 
   text-align: center;
